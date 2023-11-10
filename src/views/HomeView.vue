@@ -5,13 +5,11 @@ import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
 
 <template>
   <div class="home-container">
-    <TextFadeAnimation text="Olá," />
+    <TextFadeAnimation text="Olá" />
 
-    <TextFadeAnimation text="Meu nome é Ian R. Malavazi" animation-duration="2s" />
+    <TextFadeAnimation text="Meu nome é Ian R. Malavazi" animation-duration="4s" />
 
-    <TextFadeAnimation text="Sou desenvolvedor Web" animation-duration="3s" />
-
-    <ButtonBase class="movement" rounded>
+      <ButtonBase class="movement" rounded>
       <h3>Botão</h3>
     </ButtonBase>
   </div>
