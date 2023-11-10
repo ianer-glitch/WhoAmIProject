@@ -7,9 +7,9 @@ import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
   <div class="home-container">
     <TextFadeAnimation text="Olá," />
 
-    <textFadeAnimation text="Meu nome é Ian R. Malavazi" animation-duration="2s" />
+    <TextFadeAnimation text="Meu nome é Ian R. Malavazi" animation-duration="2s" />
 
-    <textFadeAnimation text="Sou desenvolvedor Web" animation-duration="3s" />
+    <TextFadeAnimation text="Sou desenvolvedor Web" animation-duration="3s" />
 
     <ButtonBase class="movement" rounded>
       <h3>Botão</h3>
@@ -18,7 +18,7 @@ import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
 </template>
 <style scoped>
 .home-container {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,16 +26,19 @@ import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
   width: 100%;
   height: 100%;
   padding: 4rem;
+  
 }
 .movement {
-  animation: moveButton 1s ease-in-out;
+  animation: moveButton 2s ease-in-out;
 }
 
 @keyframes moveButton {
   0% {
+    opacity: 0;
     transform: translateY(200px) rotate(0deg);
   }
   100% {
+    opacity: 1;
     transform: translateY(0px) rotate(360deg);
   }
 }
