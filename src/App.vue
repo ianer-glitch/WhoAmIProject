@@ -1,8 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useThemeStore } from '@/stores/theme';
+
+
+const store = useThemeStore()
+
+</script>
 
 <template>
   <div class="rounter-container"
-    :class="{'dark-theme':true}"
+    :class="{'dark-theme':store.isDarkTheme,'light-theme':!store.isDarkTheme}"
   >
     <RouterView />
   </div>

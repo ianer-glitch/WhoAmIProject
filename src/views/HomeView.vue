@@ -1,16 +1,32 @@
 <script setup lang="ts">
-import ButtonBase from '@/components/atoms/buttonBase.vue'
-import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
+import Icon from '@/components/atoms/Icon.vue';
+import ButtonBase from '@/components/atoms/ButtonBase.vue'
+import TextFadeAnimation from '@/components/atoms/TextFadeAnimation.vue'
+import { ref } from 'vue';
+import Header from '@/components/atoms/Header.vue';
+
+
+let shouldMoveButton = ref(false)
+
+
 </script>
+
+
 
 <template>
   <div class="home-container">
+    <Header/>
     <TextFadeAnimation text="Olá" />
 
     <TextFadeAnimation text="Meu nome é Ian R. Malavazi" animation-duration="4s" />
 
-      <ButtonBase class="movement" rounded>
-      <h3>Botão</h3>
+      <ButtonBase 
+        @click="shouldMoveButton = !shouldMoveButton" 
+        class="movement" 
+        rounded
+        :class="{'transform-button':shouldMoveButton}"
+      >
+        <Icon name="pi pi-arrow-right" is-icon-from-prime/>
     </ButtonBase>
   </div>
 </template>
@@ -26,10 +42,14 @@ import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
   padding: 4rem;
   
 }
+
 .movement {
   animation: moveButton 2s ease-in-out;
 }
-
+.transform-button{
+  animation: transformToOutside 1s ease-in-out ;
+    
+}
 @keyframes moveButton {
   0% {
     opacity: 0;
@@ -41,6 +61,18 @@ import TextFadeAnimation from '@/components/atoms/textFadeAnimation.vue'
   }
 }
 
-@media (min-width: 300px) {
+@keyframes transformToOutside{
+  from{
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+  to{
+    
+    transform: translateX(-300px) rotate(-180deg);
+    opacity: 0;
+
+  }
+
 }
 </style>

@@ -22,7 +22,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <button class="button" :class="{ primary: primary, secondary: secondary, rounded: rounded }">
+  <button class="button" :class="{ primary: props.primary, secondary: props.secondary, rounded: props.rounded }">
     <slot></slot>
   </button>
 </template>
@@ -39,11 +39,12 @@ const props = defineProps({
 
 .primary {
   background-color: var(--detail-color-1);
-  transition: all .2s ease-in-out;
+  transition: all .4s ease-in-out  ;
   
 }
 .primary:hover {
   background-color: var(--detail-color-2);
+  box-shadow: 0px 0px 15px var(--detail-color-1);
 }
 .secondary {
 }
