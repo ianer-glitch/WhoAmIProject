@@ -2,12 +2,19 @@
 import Icon from '@/components/atoms/Icon.vue';
 import ButtonBase from '@/components/atoms/ButtonBase.vue'
 import TextFadeAnimation from '@/components/atoms/TextFadeAnimation.vue'
-import { ref } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import Header from '@/components/atoms/Header.vue';
-
+import translate from '@/../public/assets/translate.json'
+import { useTranslateStorage } from '@/stores/translate';
 
 let shouldMoveButton = ref(false)
+const store = useTranslateStorage()
+let text = ref(translate[store.language as keyof typeof translate].HomeView)
 
+watch(
+()=>store.language  ,
+(language)=> text.value = reactive(translate[language as keyof typeof translate].HomeView)
+)
 
 </script>
 
@@ -15,10 +22,12 @@ let shouldMoveButton = ref(false)
 
 <template>
   <div class="home-container">
-    <Header/>
-    <TextFadeAnimation text="Olá" />
+    
+    <Header></Header>
+    <TextFadeAnimation :text="text.title" />
 
-    <TextFadeAnimation text="Meu nome é Ian R. Malavazi" animation-duration="4s" />
+    <TextFadeAnimation :text="text.myName" 
+      animation-duration="4s" />
 
       <ButtonBase 
         @click="shouldMoveButton = !shouldMoveButton" 
@@ -26,11 +35,14 @@ let shouldMoveButton = ref(false)
         rounded
         :class="{'transform-button':shouldMoveButton}"
       >
-        <Icon name="pi pi-arrow-right" is-icon-from-prime/>
+        <Icon class="icon" name="pi pi-arrow-right" is-icon-from-prime/>
     </ButtonBase>
   </div>
 </template>
 <style scoped>
+.icon{
+  color: #fff;
+}
 .home-container {
   background-color: var(--bg-color-1);
   display: flex;

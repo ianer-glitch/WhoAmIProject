@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import LanguageSelector from './LanguageSelector.vue';
 import Switch from './Switch.vue';
 import { useThemeStore } from '@/stores/theme';
 
@@ -10,6 +11,7 @@ const store = useThemeStore()
 <template>
   <header class="header">
     <Switch v-model="store.isDarkTheme" />
+    <LanguageSelector/>
   </header>
 </template>
 <style scoped>
