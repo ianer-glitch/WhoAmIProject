@@ -1,50 +1,43 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue';
-
-
+import { onMounted, ref, watch } from 'vue'
 
 let internalValue = ref(false)
 
-const emit= defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue'])
 
 const props = defineProps({
-  modelValue:{
-    default:false,
-    type:Boolean,
+  modelValue: {
+    default: false,
+    type: Boolean
   }
 })
 
-onMounted(()=>{
+onMounted(() => {
   internalValue.value = props.modelValue
 })
 
 watch(
-  ()=>props.modelValue,
-  (modelValue)=>{
-    internalValue.value =  modelValue
+  () => props.modelValue,
+  (modelValue) => {
+    internalValue.value = modelValue
   }
 )
 
-const handleValueChange = () =>{
+const handleValueChange = () => {
   internalValue.value = !internalValue.value
-  emit('update:modelValue',internalValue)
-
+  emit('update:modelValue', internalValue)
 }
-
 </script>
 <template>
-  <div @click="handleValueChange()" 
-    class="switch-container">
-    <div class="dot-slider"
-    :class="{'dot-slider-left':!internalValue,'dot-slider-right':internalValue}"
+  <div @click="handleValueChange()" class="switch-container">
+    <div
+      class="dot-slider"
+      :class="{ 'dot-slider-left': !internalValue, 'dot-slider-right': internalValue }"
     ></div>
   </div>
 </template>
 <style scoped>
-
-
-
-.switch-container{
+.switch-container {
   background-color: var(--bg-color-2);
   width: 4rem;
   height: 2rem;
@@ -52,30 +45,27 @@ const handleValueChange = () =>{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .1rem;
+  padding: 0.1rem;
   position: relative;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-.switch-container:hover{
+.switch-container:hover {
   box-shadow: 0px 0px 15px var(--detail-color-1);
 }
-.dot-slider{
+.dot-slider {
   background-color: aqua;
   height: 1.8rem;
   width: 1.8rem;
   border-radius: 999px;
   position: absolute;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-.dot-slider-left{
+.dot-slider-left {
   transform: translateX(-1rem);
 }
 
-.dot-slider-right{
+.dot-slider-right {
   transform: translateX(1rem);
 }
-
-
-
 </style>

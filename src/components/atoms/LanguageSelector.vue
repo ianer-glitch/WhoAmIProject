@@ -1,40 +1,57 @@
 <script setup lang="ts">
-import { useTranslateStorage } from '@/stores/translate';
-import { ref } from 'vue';
+import { useTranslateStorage } from '@/stores/translate'
+import { computed, watch } from 'vue'
 
 const store = useTranslateStorage()
 
-let internalValue = ref(true)
+let selectedLanguage = computed(() => store.language)
+
+watch(
+  () => selectedLanguage.value,
+  (newValue) => {
+    setSelectedLanguageOnHtml(newValue)
+  }
+)
+
+const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
+  const html = document.querySelector('html')
+  html?.setAttribute('language', languageAbreviation)
+}
 </script>
 <template>
-  
-   <div class="language-container">
-     <h4 class="item" @click="store.language='pt-br'" :class="{active:store.language=='pt-br'}" >pt-br</h4>
-     <h4 class="item" @click="store.language='en'" :class="{active:store.language=='en'}" >en-us</h4>
-    </div>
-    </template>
+  <div class="language-container">
+    <h4
+      class="item"
+      @click="selectedLanguage = 'pt-br'"
+      :class="{ active: selectedLanguage == 'pt-br' }"
+    >
+      pt-br
+    </h4>
+    <h4 class="item" @click="selectedLanguage = 'en'" :class="{ active: selectedLanguage == 'en' }">
+      en-us
+    </h4>
+  </div>
+</template>
 <style scoped>
-
-.language-container{
+.language-container {
   display: flex;
   align-items: center;
   justify-items: space-between;
   width: fit-content;
-  gap:1rem;
-  
+  gap: 1rem;
+
   border-radius: 16px;
-  
+
   height: 2rem;
 }
-.item{
-cursor: pointer;
-
+.item {
+  cursor: pointer;
 }
-.active{
+.active {
   background-color: aqua;
-  padding: .2rem;
+  padding: 0.2rem;
   height: 100%;
-  border-radius: 16px ;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;

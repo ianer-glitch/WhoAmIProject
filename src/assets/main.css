@@ -1,25 +1,17 @@
 @import './base.css';
 
-
-
-
-.light-theme{
-  --bg-color-1: #E0F4FF;
-  --bg-color-2: #87C4FF;
-  --detail-color-1:#87C4FF;
-  --detail-color-2:#39A7FF;
-  --text-color-1:black;
-  
-
-
+.light-theme {
+  --bg-color-1: #e0f4ff;
+  --bg-color-2: #87c4ff;
+  --detail-color-1: #87c4ff;
+  --detail-color-2: #39a7ff;
+  --text-color-1: black;
 }
 
-.dark-theme{
+.dark-theme {
   --bg-color-1: #2b2a33;
-  --bg-color-2: #393E46;
-  --detail-color-1:#00bbc5;
-  --detail-color-2:#00dfd7;
-  --text-color-1:white;
-
-
+  --bg-color-2: #393e46;
+  --detail-color-1: #00bbc5;
+  --detail-color-2: #00dfd7;
+  --text-color-1: white;
 }

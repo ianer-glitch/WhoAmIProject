@@ -20,11 +20,8 @@ watch(
 
 <template>
   <div class="home-container">
-    <ExperienceItem
-      title="VueJs"
-      subtitle="1.5 Anos"
-      />
-    <!-- <Header></Header> -->
+    <ExperienceItem title="VueJs" subtitle="1.5 Anos" />
+    <Header></Header>
     <TextFadeAnimation :text="text.title" />
 
     <TextFadeAnimation :text="text.myName" animation-duration="4s" />
@@ -36,7 +33,7 @@ watch(
       :class="{ 'transform-button': shouldMoveButton }"
     >
       <Icon class="icon" name="pi pi-arrow-right" is-icon-from-prime />
-    </ButtonBase> 
+    </ButtonBase>
   </div>
 </template>
 <style scoped>
