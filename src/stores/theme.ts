@@ -1,8 +1,9 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import { ThemeEnum } from '@/enums/ThemeEnum'
 
 export const useThemeStore = defineStore('theme', () => {
-  const isDarkTheme = ref(true)
+  const currenctTheme = ref(ThemeEnum.Dark)
 
   // const count = ref(0)
   // const doubleCount = computed(() => count.value * 2)
@@ -10,5 +11,5 @@ export const useThemeStore = defineStore('theme', () => {
   //   count.value++
   // }
 
-  return { isDarkTheme }
+  return { currenctTheme }
 })

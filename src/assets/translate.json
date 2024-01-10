@@ -1,12 +1,12 @@
 {
   "pt-br":{
-    "HomeView":{
+    "Home":{
       "title":"Olá",
       "myName":"Meu nome é Ian R. Malavazi"
     }
   },
   "en":{
-    "HomeView":{
+    "Home":{
       "title":"Hello",
       "myName":"I'm Ian R. Malavazi"
     }

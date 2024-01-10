@@ -5,23 +5,63 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-html,
-body,
-#app {
+html,body,#app {
   width: 100%;
   height: 100%;
 }
 
-h1 {
-  font-size: 2rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
+h1,h2,h3,h4,h5,p {
   color: var(--text-color-1);
 }
+
+:root{
+  --h1-font-size:2rem;
+  --h2-font-size:1.8rem;
+  --h3-font-size:1.2rem;
+  --p-font-size:.8rem;
+  --font-proportion:1;
+}
+
+h1{
+  font-size: calc(var(--h1-font-size)*var(--font-proportion));
+}
+
+h2{
+  font-size: calc(var(--h2-font-size)*var(--font-proportion));
+}
+
+h3{
+  font-size: calc(var(--h3-font-size)*var(--font-proportion));
+}
+p{
+  font-size: calc(var(--p-font-size)*var(--font-proportion));
+}
+
+@media (min-width : 300px) {
+  :root{
+    --font-proportion:.6
+  }
+}
+
+@media (min-width : 600px) {
+  :root{
+    --font-proportion:.8
+  }
+}
+
+@media (min-width : 800px) {
+  :root{
+    --font-proportion:1
+  }
+}
+
+@media (min-width : 800px) {
+  :root{
+    --font-proportion:1.2
+  }
+}
+
+

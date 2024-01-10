@@ -18,17 +18,18 @@ onMounted(() => {
 
 watch(
   () => props.modelValue,
-  (modelValue) => {
+  (modelValue : boolean) => {
     internalValue.value = modelValue
   }
 )
 
 const handleValueChange = () => {
   internalValue.value = !internalValue.value
-  emit('update:modelValue', internalValue)
+  emit('update:modelValue', internalValue.value)
 }
 </script>
 <template>
+  
   <div @click="handleValueChange()" class="switch-container">
     <div
       class="dot-slider"
