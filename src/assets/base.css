@@ -36,31 +36,32 @@ h2{
 h3{
   font-size: calc(var(--h3-font-size)*var(--font-proportion));
 }
+
 p{
   font-size: calc(var(--p-font-size)*var(--font-proportion));
 }
 
 @media (min-width : 300px) {
   :root{
-    --font-proportion:.6
+    --font-proportion:.8;
   }
 }
 
 @media (min-width : 600px) {
   :root{
-    --font-proportion:.8
+    --font-proportion:1;
   }
 }
 
 @media (min-width : 800px) {
   :root{
-    --font-proportion:1
+    --font-proportion:1.2;
   }
 }
 
-@media (min-width : 800px) {
+@media (min-width : 1024px) {
   :root{
-    --font-proportion:1.2
+    --font-proportion:1.4;
   }
 }
 
