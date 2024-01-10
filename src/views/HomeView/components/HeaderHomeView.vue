@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import LanguageSelector from './LanguageSelector.vue'
-import ThemeSwitch from '../_specific/switch/ThemeSwitch.vue';
+import ThemeSwitch from '@/components/_specific/switch/ThemeSwitch.vue';
+import LanguageSelector from '@/components/atoms/LanguageSelector.vue';
+
+
 
 
 
@@ -8,8 +10,8 @@ import ThemeSwitch from '../_specific/switch/ThemeSwitch.vue';
 </script>
 <template>
   <header class="header">
-    <ThemeSwitch />
     <LanguageSelector />
+    <ThemeSwitch />
   </header>
 </template>
 <style scoped>
@@ -18,10 +20,9 @@ import ThemeSwitch from '../_specific/switch/ThemeSwitch.vue';
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(50px);
-
   width: 100vw;
   height: 8vh;
-  position: absolute;
+  position: static;
   top: 0;
   padding: 1rem;
 }

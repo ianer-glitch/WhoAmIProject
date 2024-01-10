@@ -19,5 +19,6 @@ const store = useThemeStore()
 .rounter-container {
   width: 100%;
   height: 100%;
+  background-color: var(--bg-color-2);
 }
 </style>
