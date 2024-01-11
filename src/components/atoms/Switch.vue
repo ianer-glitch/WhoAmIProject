@@ -39,7 +39,7 @@ const handleValueChange = () => {
 </template>
 <style scoped>
 .switch-container {
-  background-color: var(--bg-color-2);
+  background-color: var(--bg-color-1);
   width: 4rem;
   height: 2rem;
   border-radius: 24px;

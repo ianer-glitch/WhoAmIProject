@@ -5,8 +5,9 @@ import { getPageTextsInCurrenctLanguage } from '@/shared/languageCommon'
 import HeaderHomeView from './components/HeaderHomeView.vue';
 import AboutMe from './components/AboutMe.vue';
 import ProjectShowcase from './components/ProjectShowcase.vue';
+import ExperienceShowcase from './components/ExperienceShowcase.vue';
 
-let shouldMoveButton = ref(false)
+
 let text = ref(getPageTextsInCurrenctLanguage())
 </script>
 
@@ -15,7 +16,7 @@ let text = ref(getPageTextsInCurrenctLanguage())
     <HeaderHomeView/>
     <AboutMe />
     <ProjectShowcase/>
-
+    <ExperienceShowcase/>
     </div>
    
 </template>
@@ -27,8 +28,6 @@ let text = ref(getPageTextsInCurrenctLanguage())
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  /* padding: 1rem; */
   gap:2rem;
 }
 

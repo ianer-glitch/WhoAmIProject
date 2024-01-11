@@ -19,14 +19,16 @@
   width: 100%;
   gap: 4rem;
   line-height: 2.2em;
-  
+  height: 65vh;
+  /* background-color: tomato; */
 }
 
 @media (min-width: 600px) {
   .about-me-section{
     flex-direction: row;
     justify-content: space-between;
-    padding: 4rem;
+    
+    width: 80%;
   }
 }
 </style>

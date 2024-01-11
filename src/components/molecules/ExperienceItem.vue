@@ -1,47 +1,52 @@
 <script setup lang="ts">
-export interface ExperienceItemProps {
+export interface IExperienceItemProps {
   title: String
   subtitle: String
   imgName?: String
 }
 
-const props = defineProps<ExperienceItemProps>()
+const props = defineProps<IExperienceItemProps>()
 </script>
 
 <template>
   <div
-    class="relative g-orange-500 overflow-hidden w-full h-20 outer-container flex items-center justify-start"
+    class="outer-container"
   >
-    <div class="circle absolute"></div>
-    <div class="flex w-full bg-teal-500 item">
-      <h3 class="text">{{ props.title }}</h3>
-      <h3 class="text">{{ props.subtitle }}</h3>
+  <div class="item">
+      <div class="circle "></div>
+      <p class="text">{{ props.title }} {{ props.subtitle }}</p>
+      
     </div>
   </div>
 </template>
 
 <style scoped>
 .circle {
-  border-radius: 999px;
-  height: 5rem;
-  width: 5rem;
-  background-color: tomato;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+  height: 3.6rem;
+  width: 3.6em;
+  background-color: var(--detail-color-1);
+  border-radius: 100%;
+  
+  
 }
 .outer-container {
-  border-radius: 60px;
   animation: expand 2s cubic-bezier(0, 0.49, 0.37, 1.16);
+  width: 100%;
+  height: fit-content;
 }
 .item {
-  height: calc(100% - 0.2rem);
-  border-radius: 999px;
-  padding-left: 6rem;
-  padding-right: 1rem;
+  width: 100%;
+  background-color: var(--bg-color-1);
+  border-radius:  999px  ;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
+}
+.text{
+  padding: 1.2rem;
 }
 .item .text {
   animation: opacity 2s ease-in-out;
