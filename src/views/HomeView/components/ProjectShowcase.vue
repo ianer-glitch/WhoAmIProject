@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
-import { onMounted, reactive } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 
 let projectsToShow: Array<ProjectShowcaseItem> = reactive([])
-onMounted(() => {
+const mountProjectsArray = () =>{
   for (let i = 0; i <= 5; i++) {
     setTimeout(() => {
       const projectItem = new ProjectShowcaseItem()
@@ -12,12 +12,25 @@ onMounted(() => {
       projectsToShow.push(projectItem)
     }, i * 100)
   }
+}
+const projecListRef=ref(null)
+
+onMounted(() => {
+  const observer =  new IntersectionObserver((entries)=>{
+    entries.forEach(entry =>{
+      console.info(entry)
+      if(entry.isIntersecting && projectsToShow.length <= 5){
+        mountProjectsArray()
+      }
+    })
+  },{rootMargin:"-110px"})
+  observer.observe(projecListRef.value as any)
 })
 </script>
 <template>
-  <section class="img-outer-container">
-    <h2 class="pb-8">Lorem ipsum dolor</h2>
-    <ul class="img-containter">
+  <section  class="img-outer-container">
+    <h2   class="pb-8 ">Lorem ipsum dolor</h2>
+    <ul ref="projecListRef" class="img-containter">
       <TransitionGroup name="list">
         <li v-for="(project, index) in projectsToShow" :key="index">
           <figcaption>
@@ -39,6 +52,8 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 200px;
+  
 }
 .img-containter {
   display: flex;

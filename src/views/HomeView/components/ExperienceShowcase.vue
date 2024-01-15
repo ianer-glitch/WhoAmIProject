@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import ExperienceItemProps from '@/classes/ExperienceItemProps';
 import ExperienceItem from '@/components/molecules/ExperienceItem.vue';
-import { onMounted, reactive } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 
 let experienceList : Array<ExperienceItemProps> = reactive([])
-
+const experienceListRef = ref(null)
 onMounted(()=>{
     const internalExperienceList :Array<ExperienceItemProps> = [
       new ExperienceItemProps("VueJs","1,5"),  
@@ -12,7 +12,15 @@ onMounted(()=>{
       new ExperienceItemProps(".Net","1,5"),  
     ]
 
-    inicializeExperienceList(internalExperienceList)
+    const observer =  new IntersectionObserver((entries)=>{
+    entries.forEach(entry =>{
+      if(entry.isIntersecting && internalExperienceList.length !== experienceList.length){
+        inicializeExperienceList(internalExperienceList)
+      }
+    })
+  },{rootMargin:"10px"})
+  observer.observe(experienceListRef.value as any)
+
 })
 
 const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>) : void => {
@@ -29,7 +37,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>) :
 <template>
 <section class="experience-container">
   <h2 class="pb-8">Lorem Ipsum</h2>
-  <ul class="list-container">
+  <ul ref="experienceListRef" class="list-container">
     <TransitionGroup name="exp-list">
       <li class="w-full flex items-center justify-center" v-for="(exp,index) in experienceList"
         :key = index
