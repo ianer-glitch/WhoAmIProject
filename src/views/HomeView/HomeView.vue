@@ -6,6 +6,7 @@ import HeaderHomeView from './components/HeaderHomeView.vue';
 import AboutMe from './components/AboutMe.vue';
 import ProjectShowcase from './components/ProjectShowcase.vue';
 import ExperienceShowcase from './components/ExperienceShowcase.vue';
+import ContactMe from './components/ContactMe.vue';
 
 
 let text = ref(getPageTextsInCurrenctLanguage())
@@ -18,6 +19,7 @@ let text = ref(getPageTextsInCurrenctLanguage())
     <AboutMe />
     <ProjectShowcase/>
     <ExperienceShowcase/>
+    <ContactMe/>
   </div>
    
 </template>
