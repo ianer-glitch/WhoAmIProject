@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 export interface IExperienceItemProps {
   title: String
   subtitle: String
@@ -46,7 +47,9 @@ const props = defineProps<IExperienceItemProps>()
   height: 100%;
 }
 .text{
-  padding: 1.2rem;
+  padding: .8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .item .text {
   animation: opacity 2s ease-in-out;

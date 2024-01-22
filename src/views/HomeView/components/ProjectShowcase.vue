@@ -18,7 +18,6 @@ const projecListRef=ref(null)
 onMounted(() => {
   const observer =  new IntersectionObserver((entries)=>{
     entries.forEach(entry =>{
-      console.info(entry)
       if(entry.isIntersecting && projectsToShow.length <= 5){
         mountProjectsArray()
       }

@@ -14,7 +14,7 @@ onMounted(()=>{
 
     const observer =  new IntersectionObserver((entries)=>{
     entries.forEach(entry =>{
-      if(entry.isIntersecting && internalExperienceList.length !== experienceList.length){
+      if(entry.isIntersecting && experienceList.length < internalExperienceList.length ){
         inicializeExperienceList(internalExperienceList)
       }
     })

@@ -1,12 +1,19 @@
+<script setup lang="ts">
+import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
+import { useTranslateStorage } from '@/stores/translate';
+import { computed, onMounted, reactive, ref, watch } from 'vue';
+
+let texts = computed(()=>getPageTextsInCurrenctLanguageReactive())
+// onMounted(()=>text = )
+
+
+
+</script>
 <template>
   <section class="about-me-section">
-    <h2>lorem Ipsum<br>
-        lorem Ipsum<br>
-        lorem Ipsum</h2>
-
-    <h3>lorem Ipsum <br>
-        lorem Ipsum <br>
-        lorem Ipsum</h3>
+    <h1>{{ texts.aboutMe.greetings }}</h1>
+      
+    <h2> {{ texts.aboutMe.description }}</h2>
   </section>
 </template>
 <style scoped>
@@ -18,8 +25,10 @@
   flex-direction: column;
   width: 100%;
   gap: 4rem;
-  line-height: 2.2em;
+  /* line-height: 2.2em; */
   height: 65vh;
+  padding: 2rem;
+  text-align: center;
   /* background-color: tomato; */
 }
 

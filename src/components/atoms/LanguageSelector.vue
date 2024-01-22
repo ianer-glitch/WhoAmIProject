@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { useTranslateStorage } from '@/stores/translate'
-import { computed, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 const store = useTranslateStorage()
 
-let selectedLanguage = computed(() => store.language)
+let selectedLanguage = ref(store.language)
 
 watch(
   () => selectedLanguage.value,
   (newValue) => {
+    
     setSelectedLanguageOnHtml(newValue)
+    store.language=newValue
   }
 )
 

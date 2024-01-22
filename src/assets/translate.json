@@ -1,14 +1,20 @@
 {
   "pt-br":{
     "Home":{
-      "title":"Olá",
-      "myName":"Meu nome é Ian R. Malavazi"
+      "aboutMe":{
+         "greetings":"Olá, eu sou Ian R. Malavazi ,muito prazer!",
+         "description":"Sou um Desenvolvedor Web, apaixondado por tecnologia",
+         "keyWords":["Desenvolvedor", "Ian" , "R." , "Malavazi","tecnologia" , "web"]
+      }
     }
   },
   "en":{
     "Home":{
-      "title":"Hello",
-      "myName":"I'm Ian R. Malavazi"
+      "aboutMe":{
+        "greetings":"Hello!",
+        "description":"developer",
+        "keyWords":["Desenvolvedor", "Ian" , "R." , "Malavazi","tecnologia"]
+     }
     }
   }
 
