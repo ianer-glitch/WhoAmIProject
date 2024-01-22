@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import { getPageTextsInCurrenctLanguage } from '@/shared/languageCommon'
+
 import HeaderHomeView from './components/HeaderHomeView.vue';
 import AboutMe from './components/AboutMe.vue';
 import ProjectShowcase from './components/ProjectShowcase.vue';

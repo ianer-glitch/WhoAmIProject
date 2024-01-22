@@ -11,7 +11,7 @@ const  getPageTextsInCurrenctLanguage =  (languageIdentifier : string) =>{
   return  translateData[pageName as keyof typeof translateData] 
 }
 
-const getPageTextsInCurrenctLanguageReactive = () =>{
+const getPageTextsInCurrenctLanguageReactive = () :any =>{
   const store = useTranslateStorage()
   let pageTexts = reactive( getPageTextsInCurrenctLanguage(store.language))
 

@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
+import { computed } from 'vue';
 
+let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
 </script>
 <template>
     <section class="about-container">
-        <h2 class="pb-8">Lorem Ipsum</h2>
+        <h2 class="pb-8">{{ text.contactMe.title }}</h2>
         <p>Lorem Ipsum</p>
         <p>Lorem Ipsum</p>
         <p>Lorem Ipsum</p>

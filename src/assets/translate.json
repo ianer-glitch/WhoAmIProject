@@ -2,10 +2,25 @@
   "pt-br":{
     "Home":{
       "aboutMe":{
-         "greetings":"Olá, eu sou Ian R. Malavazi ,muito prazer!",
-         "description":"Sou um Desenvolvedor Web, apaixondado por tecnologia",
+         "greetings":"Olá, eu sou Ian R. Malavazi, muito prazer!",
+         "description":"Sou um Desenvolvedor Web Full Stack, apaixondado por tecnologia",
          "keyWords":["Desenvolvedor", "Ian" , "R." , "Malavazi","tecnologia" , "web"]
-      }
+      
+        },
+        "projectShowcase":{
+          "title" : "Projetos Pessoais"
+        },
+        "experienceShowcase":{
+          "title": "Minhas Experiências",
+          "timeStamp":{
+            "singular":"Ano",
+            "plural":"Anos"
+          }
+        },
+        "contactMe":{
+          "title":"Entre em Contato"
+        }
+
     }
   },
   "en":{

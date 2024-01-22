@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
-import { useTranslateStorage } from '@/stores/translate';
-import { computed, onMounted, reactive, ref, watch } from 'vue';
+import { computed } from 'vue';
 
 let texts = computed(()=>getPageTextsInCurrenctLanguageReactive())
 // onMounted(()=>text = )
@@ -23,7 +22,7 @@ let texts = computed(()=>getPageTextsInCurrenctLanguageReactive())
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   gap: 4rem;
   /* line-height: 2.2em; */
   height: 65vh;
