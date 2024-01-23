@@ -4,23 +4,28 @@ import ExperienceItem from '@/components/molecules/ExperienceItem.vue';
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
 import { computed, onMounted, reactive, ref } from 'vue';
 
+let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
+
 let experienceList : Array<ExperienceItemProps> = reactive([])
 const experienceListRef = ref(null)
 let listVisible  = ref(false)
 onMounted(()=>{
+  const yearsString = text.value.experienceShowcase.years
+  const months = text.value.experienceShowcase.months
   const internalExperienceList :Array<ExperienceItemProps> = [
-    new ExperienceItemProps("VueJs","1,5"),  
-    new ExperienceItemProps("HTML","1,5"),  
-    new ExperienceItemProps("CSS","1,5"),  
-    new ExperienceItemProps("Typescript","1,5"),
-    new ExperienceItemProps("JavasScript","1,5"),
-    new ExperienceItemProps("C#","1,5"),  
-    new ExperienceItemProps(".Net","1,5"),
-    new ExperienceItemProps("LinQ","1,5"),
-    new ExperienceItemProps("Dapper ORM","1,5"),
-    new ExperienceItemProps("Google Protobuf","1,5"),
-    new ExperienceItemProps("Entity Framework","1,5"),
-    new ExperienceItemProps("SQL","1,5"),  
+    new ExperienceItemProps("VueJs",`1,5 ${yearsString}`),  
+    new ExperienceItemProps("HTML",`1,5 ${yearsString}`),  
+    new ExperienceItemProps("CSS",`1,5 ${yearsString}`),  
+    new ExperienceItemProps("Typescript",`6 ${months}`),
+    new ExperienceItemProps("JavasScript",`1,5 ${yearsString}`),
+    new ExperienceItemProps("C#",`1,5 ${yearsString}`),  
+    new ExperienceItemProps(".Net",`1,5 ${yearsString}`),
+    new ExperienceItemProps("LinQ",`1,5 ${yearsString}`),
+    new ExperienceItemProps("Dapper ORM",`1,5 ${yearsString}`),
+    new ExperienceItemProps("Google Protobuf",`8 ${months}`),
+    new ExperienceItemProps("Entity Framework",`1,5 ${yearsString}`),
+    new ExperienceItemProps("SQL",`1,5 ${yearsString}`), 
+    new ExperienceItemProps("Linux",`5 ${yearsString}`),   
     ]
 
     const observer =  new IntersectionObserver((entries)=>{
@@ -44,7 +49,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>) :
 
 }
 
-let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
+
 </script>
 
 <template>

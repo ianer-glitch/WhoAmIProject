@@ -11,7 +11,6 @@ let texts = computed(()=>getPageTextsInCurrenctLanguageReactive())
 <template>
   <section class="about-me-section">
     <h1>{{ texts.aboutMe.greetings }}</h1>
-      
     <h2> {{ texts.aboutMe.description }}</h2>
   </section>
 </template>

@@ -12,10 +12,10 @@
         },
         "experienceShowcase":{
           "title": "Minhas Experiências",
-          "timeStamp":{
-            "singular":"Ano",
-            "plural":"Anos"
-          }
+          "month": "Mês",
+          "months":"Mêses",
+          "year":"Ano",
+          "years":"Anos"
         },
         "contactMe":{
           "title":"Entre em Contato"
@@ -35,11 +35,11 @@
           "title" : "Personal Projects"
         },
         "experienceShowcase":{
-          "title": "My Experiences",
-          "timeStamp":{
-            "singular":"Ano",
-            "plural":"Anos"
-          }
+          "title": "My Experiences1,5",
+          "month": "Month",
+          "months":"Months",
+          "year":"Year",
+          "years":"Years"
         },
         "contactMe":{
           "title":"Contact Me"
