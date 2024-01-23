@@ -26,10 +26,25 @@
   "en":{
     "Home":{
       "aboutMe":{
-        "greetings":"Hello!",
-        "description":"developer",
-        "keyWords":["Desenvolvedor", "Ian" , "R." , "Malavazi","tecnologia"]
-     }
+         "greetings":"Hi, I'm Ian R. Malavazi, Nice to meet you!",
+         "description":"I'm a FullStack developer that loves technology",
+         "keyWords":[]
+      
+        },
+        "projectShowcase":{
+          "title" : "Personal Projects"
+        },
+        "experienceShowcase":{
+          "title": "My Experiences",
+          "timeStamp":{
+            "singular":"Ano",
+            "plural":"Anos"
+          }
+        },
+        "contactMe":{
+          "title":"Contact Me"
+        }
+
     }
   }
 

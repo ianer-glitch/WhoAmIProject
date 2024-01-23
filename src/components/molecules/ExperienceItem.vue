@@ -28,6 +28,7 @@ const props = defineProps<IExperienceItemProps>()
   width: 3.6em;
   background-color: var(--detail-color-1);
   border-radius: 100%;
+  transition: all .2s .08s ease-in-out;
   
   
 }
@@ -45,6 +46,16 @@ const props = defineProps<IExperienceItemProps>()
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  transition : all .2s ease-in-out;
+}
+
+.item:is(:hover,:focus){
+  box-shadow: 1px 1px 10px var(--detail-color-2);
+  scale: 1.1;
+}
+.item:is(:hover,:focus) .circle{
+  scale: 1.4;
+  box-shadow: 1px 1px 10px var(--bg-color-1);
 }
 .text{
   padding: .8rem;
