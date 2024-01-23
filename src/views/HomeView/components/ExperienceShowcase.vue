@@ -25,7 +25,7 @@ onMounted(()=>{
     new ExperienceItemProps("Google Protobuf",`8 ${months}`),
     new ExperienceItemProps("Entity Framework",`1,5 ${yearsString}`),
     new ExperienceItemProps("SQL",`1,5 ${yearsString}`), 
-    new ExperienceItemProps("Linux",`5 ${yearsString}`),   
+    new ExperienceItemProps("Linux",`4 ${yearsString}`),   
     ]
 
     const observer =  new IntersectionObserver((entries)=>{
