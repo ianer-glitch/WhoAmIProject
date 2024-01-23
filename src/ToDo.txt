@@ -1,0 +1,13 @@
+[ ] alterar nome de aquivos css para WhoAmITheme.css e base.css
+[ ] alterar localização da pasta de composables
+[ ] criar o layout 
+[ ] converter o homer header no header geral da aplicação
+[ ] criar seletor de idiomas mais legal
+[ ] adiconar tema ligh mais bonito
+[ ] esclher o tema segundo preferências do sistema do usuario com media query
+[ ] animação do texto expandir no aboutMe
+[ ] criação da página de detalhes
+[ ] adição das imagems dos projetos
+[ ] adição do ícones das tecnologias
+[ ] adição do ícone do linkedin no contac me
+[ ] estilizar o contact me
