@@ -9,10 +9,9 @@ import ExperienceShowcase from './components/ExperienceShowcase.vue';
 import ContactMe from './components/ContactMe.vue';
 
 
-// let text = ref(getPageTextsInCurrenctLanguage())
+
 </script>
-<!-- animations using viewPort -->
-<!-- https://www.youtube.com/watch?v=sORoAeGhlj0&t=3s -->
+
 
 <template>
   <div class="home-container">
