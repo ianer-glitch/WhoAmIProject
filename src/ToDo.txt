@@ -11,3 +11,5 @@
 [ ] adição do ícones das tecnologias
 [ ] adição do ícone do linkedin no contac me
 [ ] estilizar o contact me
+[ ] crirar ícone/logo IRM.
+[ ] animação texto
