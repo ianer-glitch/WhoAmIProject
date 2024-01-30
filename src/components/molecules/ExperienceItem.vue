@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+
 
 export interface IExperienceItemProps {
   title: String
   subtitle: String
-  imgName?: String
+  imgName: String
 }
+
+const bgImage=computed(()=> `url(${props.imgName})`)
 
 const props = defineProps<IExperienceItemProps>()
 </script>
@@ -14,7 +18,9 @@ const props = defineProps<IExperienceItemProps>()
     class="outer-container"
   >
   <div class="item">
-      <div class="circle "></div>
+      <div class="circle ">
+        
+      </div>
       <p class="text">{{ props.title }} {{ props.subtitle }}</p>
       
     </div>
@@ -26,9 +32,19 @@ const props = defineProps<IExperienceItemProps>()
   
   height: 3.6rem;
   width: 3.6em;
-  background-color: var(--detail-color-1);
+  border: 4px solid var(--detail-color-1);
   border-radius: 100%;
+  background-color:  white;
   transition: all .2s .08s ease-in-out;
+  background-image: v-bind('bgImage');
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  
+  
+  
   
   
 }
@@ -56,6 +72,8 @@ const props = defineProps<IExperienceItemProps>()
 .item:is(:hover,:focus) .circle{
   scale: 1.4;
   box-shadow: 1px 1px 10px var(--bg-color-1);
+  background-size: 80%;
+  border: 2px solid var(--detail-color-1);
 }
 .text{
   padding: .8rem;
