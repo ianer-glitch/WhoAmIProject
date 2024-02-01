@@ -1,14 +1,15 @@
 <script setup lang="ts">
+import { getImageFilePath } from '@/shared/files';
 import { computed } from 'vue';
 
 
 export interface IExperienceItemProps {
-  title: String
-  subtitle: String
-  imgName: String
+  title: string
+  subtitle: string
+  imgName: string
 }
 
-const bgImage=computed(()=> `url(${props.imgName})`)
+const bgImage=computed(()=> `url(${getImageFilePath(props.imgName)})`)
 
 const props = defineProps<IExperienceItemProps>()
 </script>
@@ -32,7 +33,7 @@ const props = defineProps<IExperienceItemProps>()
   
   height: 3.6rem;
   width: 3.6em;
-  border: 4px solid var(--detail-color-1);
+  border: 2px solid var(--detail-color-1);
   border-radius: 100%;
   background-color:  white;
   transition: all .2s .08s ease-in-out;
@@ -73,7 +74,7 @@ const props = defineProps<IExperienceItemProps>()
   scale: 1.4;
   box-shadow: 1px 1px 10px var(--bg-color-1);
   background-size: 80%;
-  border: 2px solid var(--detail-color-1);
+  border: 1px solid var(--detail-color-1);
 }
 .text{
   padding: .8rem;

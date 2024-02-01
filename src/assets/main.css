@@ -6,6 +6,7 @@
   --detail-color-1: #bbbfca;
   --detail-color-2: #f4f4f2;
   --text-color-1: black;
+  --filter-bg-1: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(1832%) hue-rotate(207deg) brightness(93%) contrast(89%);
 }
 
 .dark-theme {
@@ -14,4 +15,7 @@
   --detail-color-1: #00bbc5;
   --detail-color-2: #00dfd7;
   --text-color-1: white;
+  --filter-bg-1: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(1832%) hue-rotate(207deg) brightness(93%) contrast(89%);
+  --filter-bg-2: brightness(0) saturate(100%) invert(21%) sepia(2%) saturate(3723%) hue-rotate(180deg) brightness(95%) contrast(85%);
+  --filter-bg-3: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(7380%) hue-rotate(181deg) brightness(107%) contrast(106%);
 }

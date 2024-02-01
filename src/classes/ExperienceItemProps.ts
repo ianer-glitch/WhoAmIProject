@@ -3,7 +3,7 @@ import type { IExperienceItemProps } from "@/components/molecules/ExperienceItem
 export default class ExperienceItemProps implements IExperienceItemProps{
 
 
-constructor(public title:String,public subtitle:String,public imgName:String ) {
+constructor(public title:string,public subtitle:string,public imgName:string ) {
   
   
 }

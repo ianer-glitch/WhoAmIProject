@@ -18,25 +18,25 @@ onMounted(()=>{
 })
 
 onMounted(()=>{
-  const a = getImageFilePath("HTML5_Logo.svg")
+  
   
 
   const yearsString = text.value.experienceShowcase.years
   const months = text.value.experienceShowcase.months
   const internalExperienceList :Array<ExperienceItemProps> = [
-    new ExperienceItemProps("VueJs",`1,5 ${yearsString}`,getImageFilePath("vue-js-icon.svg")),  
-    new ExperienceItemProps("HTML",`1,5 ${yearsString}`,getImageFilePath("HTML5_Logo.svg")),  
-    new ExperienceItemProps("CSS",`1,5 ${yearsString}`,getImageFilePath("CSS3_logo_and_wordmark.svg")),  
-    new ExperienceItemProps("Typescript",`6 ${months}`,getImageFilePath("Typescript_logo_2020.svg")),
-    new ExperienceItemProps("JavasScript",`1,5 ${yearsString}`,getImageFilePath("Javascript-shield.svg")),
-    new ExperienceItemProps("C#",`1,5 ${yearsString}`,getImageFilePath("Logo_C_sharp.svg")),  
-    new ExperienceItemProps(".Net",`1,5 ${yearsString}`,getImageFilePath("Net.png")),
-    new ExperienceItemProps("LinQ",`1,5 ${yearsString}`,getImageFilePath("Net.png")),
-    new ExperienceItemProps("Dapper ORM",`1,5 ${yearsString}`,getImageFilePath("dapper.png")),
-    new ExperienceItemProps("Google Protobuf",`8 ${months}`,getImageFilePath("HTML5_Logo.svg")),
-    new ExperienceItemProps("Entity Framework",`1,5 ${yearsString}`,getImageFilePath("Net.png")),
-    new ExperienceItemProps("SQL",`1,5 ${yearsString}`,getImageFilePath("sql-server.svg")), 
-    new ExperienceItemProps("Linux",`4 ${yearsString}`,getImageFilePath("Tux.svg")),   
+    new ExperienceItemProps("VueJs",`1,5 ${yearsString}`,"vue-js-icon.svg"),  
+    new ExperienceItemProps("HTML",`1,5 ${yearsString}`,"HTML5_Logo.svg"),  
+    new ExperienceItemProps("CSS",`1,5 ${yearsString}`,"CSS3_logo_and_wordmark.svg"),  
+    new ExperienceItemProps("Typescript",`6 ${months}`,"Typescript_logo_2020.svg"),
+    new ExperienceItemProps("JavasScript",`1,5 ${yearsString}`,"Javascript-shield.svg"),
+    new ExperienceItemProps("C#",`1,5 ${yearsString}`,"Logo_C_sharp.svg"),  
+    new ExperienceItemProps(".Net",`1,5 ${yearsString}`,"Net.png"),
+    new ExperienceItemProps("LinQ",`1,5 ${yearsString}`,"Net.png"),
+    new ExperienceItemProps("Dapper ORM",`1,5 ${yearsString}`,"dapper.png"),
+    new ExperienceItemProps("Google Protobuf",`8 ${months}`,"HTML5_Logo.svg"),
+    new ExperienceItemProps("Entity Framework",`1,5 ${yearsString}`,"Net.png"),
+    new ExperienceItemProps("SQL",`1,5 ${yearsString}`,"sql-server.svg"), 
+    new ExperienceItemProps("Linux",`4 ${yearsString}`,"Tux.svg"),   
     ]
 
     const observer =  new IntersectionObserver((entries)=>{
@@ -86,6 +86,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>) :
 .experience-container{
   width: 80%;
   text-align: center;
+  min-height: 40%;
   
 }
 

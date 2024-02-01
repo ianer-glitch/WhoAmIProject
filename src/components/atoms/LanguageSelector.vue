@@ -50,7 +50,7 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   cursor: pointer;
 }
 .active {
-  background-color: aqua;
+  background-color: var(--detail-color-2);
   padding: 0.2rem;
   height: 100%;
   border-radius: 16px;

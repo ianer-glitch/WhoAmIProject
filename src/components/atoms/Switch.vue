@@ -55,7 +55,7 @@ const handleValueChange = () => {
   box-shadow: 0px 0px 15px var(--detail-color-1);
 }
 .dot-slider {
-  background-color: aqua;
+  background-color: var(--detail-color-2);
   height: 1.8rem;
   width: 1.8rem;
   border-radius: 999px;
