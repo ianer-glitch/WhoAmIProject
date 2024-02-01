@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { LanguageEnum } from '@/enums/LanguageEnum';
 import { useTranslateStorage } from '@/stores/translate'
 import { computed, ref, watch } from 'vue'
 
@@ -24,12 +25,14 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   <div class="language-container">
     <h4
       class="item"
-      @click="selectedLanguage = 'pt-br'"
-      :class="{ active: selectedLanguage == 'pt-br' }"
+      @click="selectedLanguage = LanguageEnum.brasilianPortuguese"
+      :class="{ active: selectedLanguage == LanguageEnum.brasilianPortuguese }"
     >
       pt-br
     </h4>
-    <h4 class="item" @click="selectedLanguage = 'en'" :class="{ active: selectedLanguage == 'en' }">
+    <h4 class="item" 
+    @click="selectedLanguage = LanguageEnum.english" 
+    :class="{ active: selectedLanguage == LanguageEnum.english }">
       en-us
     </h4>
   </div>

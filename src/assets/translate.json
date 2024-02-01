@@ -23,7 +23,7 @@
 
     }
   },
-  "en":{
+  "en-US":{
     "Home":{
       "aboutMe":{
          "greetings":"Hi, I'm Ian R. Malavazi, Nice to meet you!",
@@ -35,7 +35,7 @@
           "title" : "Personal Projects"
         },
         "experienceShowcase":{
-          "title": "My Experiences1,5",
+          "title": "My Experiences",
           "month": "Month",
           "months":"Months",
           "year":"Year",
