@@ -60,9 +60,9 @@ const containerHeigt = computed(()=> `calc(4.6rem* ${internalExperienceList.leng
 </script>
 
 <template>
-<section class="experience-container">
+<section ref="experienceListRef" class="experience-container">
   <h2 class="pb-8">{{ text.experienceShowcase.title }}</h2>
-  <ul ref="experienceListRef" class="list-container">
+  <ul  class="list-container">
     <TransitionGroup name="exp-list">
       <li class="w-full flex items-center justify-center" v-for="(exp,index) in experienceList"
         :key = index

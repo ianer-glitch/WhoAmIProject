@@ -7,7 +7,7 @@ let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
 
 const redirectToContact = (link:string) :void =>{
   if(link){
-    window.location.href=link
+    window.open(link)
   }
 }
 </script>
@@ -19,7 +19,7 @@ const redirectToContact = (link:string) :void =>{
           
             <ContactMeItem 
               image-name="LinkedIn_icon.svg"
-              @click="redirectToContact('www.linkedin.com/in/ian-repker-malavazi-2b440a180')"
+              @click="redirectToContact('https://www.linkedin.com/in/ian-repker-malavazi-2b440a180')"
             />
           
           <ContactMeItem 
