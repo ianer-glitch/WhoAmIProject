@@ -10,20 +10,9 @@ let experienceList : Array<ExperienceItemProps> = reactive([])
 const experienceListRef = ref(null)
 let listVisible  = ref(false)
 
-onMounted(()=>{    
-
-    
-
-
-})
-
-onMounted(()=>{
-  
-  
-
-  const yearsString = text.value.experienceShowcase.years
-  const months = text.value.experienceShowcase.months
-  const internalExperienceList :Array<ExperienceItemProps> = [
+const yearsString = text.value.experienceShowcase.years
+const months = text.value.experienceShowcase.months
+const internalExperienceList :Array<ExperienceItemProps> = [
     new ExperienceItemProps("VueJs",`1,5 ${yearsString}`,"vue-js-icon.svg"),  
     new ExperienceItemProps("HTML",`1,5 ${yearsString}`,"HTML5_Logo.svg"),  
     new ExperienceItemProps("CSS",`1,5 ${yearsString}`,"CSS3_logo_and_wordmark.svg"),  
@@ -38,6 +27,12 @@ onMounted(()=>{
     new ExperienceItemProps("SQL",`1,5 ${yearsString}`,"sql-server.svg"), 
     new ExperienceItemProps("Linux",`4 ${yearsString}`,"Tux.svg"),   
     ]
+onMounted(()=>{
+  
+  
+
+  
+  
 
     const observer =  new IntersectionObserver((entries)=>{
       entries.forEach(entry =>{
@@ -60,6 +55,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>) :
 
 }
 
+const containerHeigt = computed(()=> `calc(4.6rem* ${internalExperienceList.length})`)
 
 </script>
 
@@ -86,7 +82,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>) :
 .experience-container{
   width: 80%;
   text-align: center;
-  min-height: 40%;
+  height: v-bind('containerHeigt');
   
 }
 
