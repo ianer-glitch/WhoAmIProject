@@ -75,6 +75,7 @@ const props = defineProps<IExperienceItemProps>()
   box-shadow: 1px 1px 10px var(--bg-color-1);
   background-size: 80%;
   border: 1px solid var(--detail-color-1);
+  border-radius: 8px;
 }
 .text{
   padding: .8rem;

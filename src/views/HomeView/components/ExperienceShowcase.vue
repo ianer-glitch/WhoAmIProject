@@ -21,19 +21,15 @@ const internalExperienceList :Array<ExperienceItemProps> = [
     new ExperienceItemProps("C#",`1,5 ${yearsString}`,"Logo_C_sharp.svg"),  
     new ExperienceItemProps(".Net",`1,5 ${yearsString}`,"Net.png"),
     new ExperienceItemProps("LinQ",`1,5 ${yearsString}`,"Net.png"),
-    new ExperienceItemProps("Dapper ORM",`1,5 ${yearsString}`,"dapper.png"),
-    new ExperienceItemProps("Google Protobuf",`8 ${months}`,"HTML5_Logo.svg"),
     new ExperienceItemProps("Entity Framework",`1,5 ${yearsString}`,"Net.png"),
+    new ExperienceItemProps("Dapper ORM",`1,5 ${yearsString}`,"dapper.png"),
+    new ExperienceItemProps("Google Protobuf",`8 ${months}`,"protobuff.png.pro"),
     new ExperienceItemProps("SQL",`1,5 ${yearsString}`,"sql-server.svg"), 
     new ExperienceItemProps("Linux",`4 ${yearsString}`,"Tux.svg"),   
     ]
+
+    
 onMounted(()=>{
-  
-  
-
-  
-  
-
     const observer =  new IntersectionObserver((entries)=>{
       entries.forEach(entry =>{
       if(entry.isIntersecting && !listVisible.value ){

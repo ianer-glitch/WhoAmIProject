@@ -34,7 +34,9 @@ const handleValueChange = () => {
     <div
       class="dot-slider"
       :class="{ 'dot-slider-left': !internalValue, 'dot-slider-right': internalValue }"
-    ></div>
+    >
+    <slot></slot>
+  </div>
   </div>
 </template>
 <style scoped>

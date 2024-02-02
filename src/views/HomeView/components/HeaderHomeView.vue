@@ -3,10 +3,6 @@ import ThemeSwitch from '@/components/_specific/switch/ThemeSwitch.vue';
 import LanguageSelector from '@/components/atoms/LanguageSelector.vue';
 
 
-
-
-
-
 </script>
 <template>
   <header class="header">

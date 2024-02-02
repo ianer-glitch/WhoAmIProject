@@ -22,41 +22,57 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
 }
 </script>
 <template>
-  <div class="language-container">
-    <h4
-      class="item"
-      @click="selectedLanguage = LanguageEnum.brasilianPortuguese"
-      :class="{ active: selectedLanguage == LanguageEnum.brasilianPortuguese }"
-    >
-      pt-br
-    </h4>
-    <h4 class="item" 
-    @click="selectedLanguage = LanguageEnum.english" 
-    :class="{ active: selectedLanguage == LanguageEnum.english }">
-      en-us
-    </h4>
+  <div class="outer-language-container">
+    <i class="pi pi-language language-icon"></i>
+    <div class="language-container">
+      <button
+        class="item"
+        @click="selectedLanguage = LanguageEnum.brasilianPortuguese"
+        :class="{ active: selectedLanguage == LanguageEnum.brasilianPortuguese }"
+      >
+        <p>PT-BR</p>
+      </button>
+      <button class="item" 
+      @click="selectedLanguage = LanguageEnum.english" 
+      :class="{ active: selectedLanguage == LanguageEnum.english }">
+        <p>EN-US</p>
+      </button>
+    </div>
   </div>
 </template>
 <style scoped>
+.language-icon{
+ font-size: 1.2rem;
+ color:var(--text-color-1); 
+}
+.outer-language-container{
+  background-color: var(--bg-color-1);
+  padding: .6rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
 .language-container {
   display: flex;
   align-items: center;
   justify-items: space-between;
   width: fit-content;
   gap: 1rem;
-
   border-radius: 16px;
-
   height: 2rem;
+  
 }
 .item {
   cursor: pointer;
+  font-weight: bold;
 }
 .active {
-  background-color: var(--detail-color-2);
-  padding: 0.2rem;
+  background-color: var(--detail-color-1);
+  padding: 0.4rem;
   height: 100%;
-  border-radius: 16px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;

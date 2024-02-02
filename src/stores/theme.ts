@@ -3,13 +3,13 @@ import { defineStore } from 'pinia'
 import { ThemeEnum } from '@/enums/ThemeEnum'
 
 export const useThemeStore = defineStore('theme', () => {
-  const currenctTheme = ref(ThemeEnum.Dark)
-
-  // const count = ref(0)
-  // const doubleCount = computed(() => count.value * 2)
-  // function increment() {
-  //   count.value++
-  // }
+  
+  let currenctTheme = ref(ThemeEnum.Dark)
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    currenctTheme = ref(ThemeEnum.Dark)
+  }else{
+     currenctTheme = ref(ThemeEnum.Light)
+  }
 
   return { currenctTheme }
 })
