@@ -14,7 +14,7 @@ const redirectToContact = (link:string) :void =>{
 <template>
   
     <section class="about-container">
-        <h2 class="pb-8 contact-title"  >{{ text.contactMe.title }}</h2>
+        <h2 class="pb-8 contact-title font-bold"  >{{ text.contactMe.title }}</h2>
         <ul class="contact-me-item-container">
           
             <ContactMeItem 
