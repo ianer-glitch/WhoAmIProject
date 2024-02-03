@@ -3,7 +3,7 @@ import ExperienceItemProps from '@/classes/ExperienceItemProps';
 import ExperienceItem from '@/components/molecules/ExperienceItem.vue';
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
 import { computed, onMounted, reactive, ref } from 'vue';
-import {getImageFilePath} from '@/shared/files'
+
 let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
 
 let experienceList : Array<ExperienceItemProps> = reactive([])

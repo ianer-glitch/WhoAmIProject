@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ContactMeItem from '@/components/atoms/ContactMeItem.vue';
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
-import { computed, onMounted, ref } from 'vue';
+import { computed } from 'vue';
 
 let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
 

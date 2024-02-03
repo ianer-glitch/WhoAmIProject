@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import getFilePath from '@/shared/files'
 import { computed } from 'vue'
 
@@ -19,4 +19,4 @@ const iconPath = computed(() => getFilePath(props.name ?? ''))
 <template>
   <i :class="name" v-if="isIconFromPrime"></i>
   <img :src="iconPath" v-else />
-</template>
+</template> -->

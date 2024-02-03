@@ -71,11 +71,11 @@ const props = defineProps<IExperienceItemProps>()
   scale: 1.1;
 }
 .item:is(:hover,:focus) .circle{
-  scale: 1.4;
+  scale: 2;
   box-shadow: 1px 1px 10px var(--bg-color-1);
-  background-size: 80%;
+  background-size: 60%;
   border: 1px solid var(--detail-color-1);
-  border-radius: 8px;
+  
 }
 .text{
   padding: .8rem;

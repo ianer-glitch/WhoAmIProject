@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { useThemeStore } from '@/stores/theme'
+import { useThemeStore } from '@/stores/themeStore'
 import { ThemeEnum } from '@/enums/ThemeEnum';
 import Switch from '@/components/atoms/Switch.vue';
 
@@ -41,4 +41,4 @@ watch(()=>switchValue.value, (newValue) =>{
   width: 100%;
   
 }
-</style>
+</style>@/stores/themeStore
