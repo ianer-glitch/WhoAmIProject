@@ -15,6 +15,7 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
 <style scoped>
 .text-container {
   animation: expand v-bind('animationDuration') ease-in-out;

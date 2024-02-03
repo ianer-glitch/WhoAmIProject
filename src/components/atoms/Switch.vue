@@ -18,7 +18,7 @@ onMounted(() => {
 
 watch(
   () => props.modelValue,
-  (modelValue : boolean) => {
+  (modelValue: boolean) => {
     internalValue.value = modelValue
   }
 )
@@ -28,17 +28,21 @@ const handleValueChange = () => {
   emit('update:modelValue', internalValue.value)
 }
 </script>
+
 <template>
-  
-  <div @click="handleValueChange()" class="switch-container">
+  <div
+    @click="handleValueChange()"
+    class="switch-container"
+  >
     <div
       class="dot-slider"
       :class="{ 'dot-slider-left': !internalValue, 'dot-slider-right': internalValue }"
     >
-    <slot></slot>
-  </div>
+      <slot></slot>
+    </div>
   </div>
 </template>
+
 <style scoped>
 .switch-container {
   background-color: var(--bg-color-1);

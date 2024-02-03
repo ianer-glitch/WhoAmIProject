@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LanguageEnum } from '@/enums/LanguageEnum';
+import { LanguageEnum } from '@/enums/LanguageEnum'
 import { useTranslateStorage } from '@/stores/translate'
 import { ref, watch } from 'vue'
 
@@ -10,9 +10,8 @@ let selectedLanguage = ref(store.language)
 watch(
   () => selectedLanguage.value,
   (newValue) => {
-    
     setSelectedLanguageOnHtml(newValue)
-    store.language=newValue
+    store.language = newValue
   }
 )
 
@@ -21,6 +20,7 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   html?.setAttribute('language', languageAbreviation)
 }
 </script>
+
 <template>
   <div class="outer-language-container">
     <i class="pi pi-language language-icon"></i>
@@ -32,22 +32,25 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
       >
         <p>PT-BR</p>
       </button>
-      <button class="item" 
-      @click="selectedLanguage = LanguageEnum.english" 
-      :class="{ active: selectedLanguage == LanguageEnum.english }">
+      <button
+        class="item"
+        @click="selectedLanguage = LanguageEnum.english"
+        :class="{ active: selectedLanguage == LanguageEnum.english }"
+      >
         <p>EN-US</p>
       </button>
     </div>
   </div>
 </template>
+
 <style scoped>
-.language-icon{
- font-size: 1.2rem;
- color:var(--text-color-1); 
+.language-icon {
+  font-size: 1.2rem;
+  color: var(--text-color-1);
 }
-.outer-language-container{
+.outer-language-container {
   background-color: var(--bg-color-1);
-  padding: .6rem;
+  padding: 0.6rem;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -62,7 +65,6 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   gap: 1rem;
   border-radius: 16px;
   height: 2rem;
-  
 }
 .item {
   cursor: pointer;

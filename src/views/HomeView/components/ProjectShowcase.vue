@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
-import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
+import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { computed, onMounted, reactive, ref } from 'vue'
 
 let projectsToShow: Array<ProjectShowcaseItem> = reactive([])
-const mountProjectsArray = () =>{
+const mountProjectsArray = () => {
   for (let i = 0; i <= 5; i++) {
     setTimeout(() => {
       const projectItem = new ProjectShowcaseItem()
@@ -14,36 +14,45 @@ const mountProjectsArray = () =>{
     }, i * 100)
   }
 }
-const projecListRef=ref(null)
+const projecListRef = ref(null)
 
 onMounted(() => {
-  const observer =  new IntersectionObserver((entries)=>{
-    entries.forEach(entry =>{
-      if(entry.isIntersecting && projectsToShow.length <= 5){
-        mountProjectsArray()
-      }
-    })
-  },{rootMargin:"-110px"})
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && projectsToShow.length <= 5) {
+          mountProjectsArray()
+        }
+      })
+    },
+    { rootMargin: '-110px' }
+  )
   observer.observe(projecListRef.value as any)
 })
 
-
-let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
+let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 </script>
+
 <template>
-  <section  class="img-outer-container">
+  <section class="img-outer-container">
     <h2 class="pb-8 font-bold">{{ text.projectShowcase.title }}</h2>
-    <ul ref="projecListRef" class="img-containter">
+    <ul
+      ref="projecListRef"
+      class="img-containter"
+    >
       <TransitionGroup name="list">
-        <li v-for="(project, index) in projectsToShow" :key="index">
-          <figcaption >
+        <li
+          v-for="(project, index) in projectsToShow"
+          :key="index"
+        >
+          <figcaption>
             <!-- <label>{{ project.name }}</label> -->
-            <img 
+            <img
               class="image-project"
-              :src="project.link" 
-              width="250px" 
-              height="250px" 
-              loading="lazy" 
+              :src="project.link"
+              width="250px"
+              height="250px"
+              loading="lazy"
             />
           </figcaption>
         </li>
@@ -51,14 +60,14 @@ let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
     </ul>
   </section>
 </template>
+
 <style scoped>
-.image-project{
-  transition:all .2s ease-in-out;
+.image-project {
+  transition: all 0.2s ease-in-out;
   border-radius: 12px;
-  
 }
-.image-project:is(:hover,:focus){
-  scale:1.1;
+.image-project:is(:hover, :focus) {
+  scale: 1.1;
   box-shadow: 1px 1px 10px 2px var(--detail-color-1);
 }
 .img-outer-container {
@@ -71,7 +80,6 @@ let text= computed(()=> getPageTextsInCurrenctLanguageReactive())
   justify-content: center;
   flex-direction: column;
   min-height: 200px;
-  
 }
 .img-containter {
   display: flex;

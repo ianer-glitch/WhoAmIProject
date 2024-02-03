@@ -2,7 +2,4 @@
   <p>a</p>
 </template>
 
-<style>
-
-
-</style>
+<style></style>

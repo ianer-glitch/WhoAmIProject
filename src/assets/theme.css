@@ -1,10 +1,10 @@
 @import './base.css';
 
 .light-theme {
-  --bg-color-1: #D8D3CD;
-  --bg-color-2: #F7F2E7;
-  --detail-color-1: #E0ECE4;
-  --detail-color-2: #797A7E;
+  --bg-color-1: #d8d3cd;
+  --bg-color-2: #f7f2e7;
+  --detail-color-1: #e0ece4;
+  --detail-color-2: #797a7e;
   --text-color-1: black;
 }
 

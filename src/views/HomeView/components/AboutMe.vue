@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon';
-import { computed } from 'vue';
+import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
+import { computed } from 'vue'
 
-let texts = computed(()=>getPageTextsInCurrenctLanguageReactive())
+let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 // onMounted(()=>text = )
-
-
-
 </script>
+
 <template>
   <section class="about-me-section">
     <h1>{{ texts.aboutMe.greetings }}</h1>
-    <h2> {{ texts.aboutMe.description }}</h2>
+    <h2>{{ texts.aboutMe.description }}</h2>
   </section>
 </template>
+
 <style scoped>
-.about-me-section{
+.about-me-section {
   /* flex items-center justify-between flex-col bg-teal-300  */
   display: flex;
   align-items: center;
@@ -31,10 +30,10 @@ let texts = computed(()=>getPageTextsInCurrenctLanguageReactive())
 }
 
 @media (min-width: 600px) {
-  .about-me-section{
+  .about-me-section {
     flex-direction: row;
     justify-content: space-between;
-    
+
     width: 80%;
   }
 }

@@ -1,52 +1,46 @@
 {
-  "pt-br":{
-    "Home":{
-      "aboutMe":{
-         "greetings":"Olá, eu sou Ian R. Malavazi, muito prazer!",
-         "description":"Sou um Desenvolvedor Web Full Stack, apaixondado por tecnologia",
-         "keyWords":["Desenvolvedor", "Ian" , "R." , "Malavazi","tecnologia" , "web"]
-      
-        },
-        "projectShowcase":{
-          "title" : "Projetos Pessoais"
-        },
-        "experienceShowcase":{
-          "title": "Minhas Experiências",
-          "month": "Mês",
-          "months":"Meses",
-          "year":"Ano",
-          "years":"Anos"
-        },
-        "contactMe":{
-          "title":"Entre em Contato"
-        }
-
+  "pt-br": {
+    "Home": {
+      "aboutMe": {
+        "greetings": "Olá, eu sou Ian R. Malavazi, muito prazer!",
+        "description": "Sou um Desenvolvedor Web Full Stack, apaixondado por tecnologia",
+        "keyWords": ["Desenvolvedor", "Ian", "R.", "Malavazi", "tecnologia", "web"]
+      },
+      "projectShowcase": {
+        "title": "Projetos Pessoais"
+      },
+      "experienceShowcase": {
+        "title": "Minhas Experiências",
+        "month": "Mês",
+        "months": "Meses",
+        "year": "Ano",
+        "years": "Anos"
+      },
+      "contactMe": {
+        "title": "Entre em Contato"
+      }
     }
   },
-  "en-US":{
-    "Home":{
-      "aboutMe":{
-         "greetings":"Hi, I'm Ian R. Malavazi, Nice to meet you!",
-         "description":"I'm a FullStack developer that loves technology",
-         "keyWords":[]
-      
-        },
-        "projectShowcase":{
-          "title" : "Personal Projects"
-        },
-        "experienceShowcase":{
-          "title": "My Experiences",
-          "month": "Month",
-          "months":"Months",
-          "year":"Year",
-          "years":"Years"
-        },
-        "contactMe":{
-          "title":"Contact Me"
-        }
-
+  "en-US": {
+    "Home": {
+      "aboutMe": {
+        "greetings": "Hi, I'm Ian R. Malavazi, Nice to meet you!",
+        "description": "I'm a FullStack developer that loves technology",
+        "keyWords": []
+      },
+      "projectShowcase": {
+        "title": "Personal Projects"
+      },
+      "experienceShowcase": {
+        "title": "My Experiences",
+        "month": "Month",
+        "months": "Months",
+        "year": "Year",
+        "years": "Years"
+      },
+      "contactMe": {
+        "title": "Contact Me"
+      }
     }
   }
-
-
 }
