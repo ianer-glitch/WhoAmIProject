@@ -1,23 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import portfolioChildren from './childrenRoutes/portfolioChildren'
 
-// RouteName must match in translate.json
+// Routes children name must match in translate.json
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: () => import('../views/HomeView/HomeView.vue')
+      name: 'Portfolio',
+      component: () => import('../layouts/PortfolioLayout.vue'),
+      children: portfolioChildren,
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
   ]
 })
 
