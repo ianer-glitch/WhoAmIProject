@@ -17,6 +17,7 @@ const internalExperienceList: Array<ExperienceItemProps> = [
   new ExperienceItemProps('HTML', `1,5 ${yearsString}`, 'HTML5_Logo.svg'),
   new ExperienceItemProps('CSS', `1,5 ${yearsString}`, 'CSS3_logo_and_wordmark.svg'),
   new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg'),
+  new ExperienceItemProps('Docker', `6 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
   new ExperienceItemProps('JavasScript', `1,5 ${yearsString}`, 'Javascript-shield.svg'),
   new ExperienceItemProps('C#', `1,5 ${yearsString}`, 'Logo_C_sharp.svg'),
   new ExperienceItemProps('.Net', `1,5 ${yearsString}`, 'Net.png'),
