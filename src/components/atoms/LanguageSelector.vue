@@ -27,8 +27,8 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
     <div class="language-container">
       <button
         class="item"
-        @click="selectedLanguage = LanguageEnum.brasilianPortuguese"
-        :class="{ active: selectedLanguage == LanguageEnum.brasilianPortuguese }"
+        @click="selectedLanguage = LanguageEnum.brazilianPortuguese"
+        :class="{ active: selectedLanguage == LanguageEnum.brazilianPortuguese }"
       >
         <p>PT-BR</p>
       </button>

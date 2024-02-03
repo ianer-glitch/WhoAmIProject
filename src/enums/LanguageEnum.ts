@@ -1,4 +1,4 @@
 export enum LanguageEnum{
-  brasilianPortuguese="pt-br",
+  brazilianPortuguese="pt-br",
   english="en-US"
 }
