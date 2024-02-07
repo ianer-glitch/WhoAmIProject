@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import { LanguageEnum } from '@/enums/LanguageEnum'
 import { useAboutProjectStore } from '@/stores/aboutProjectStore'
 import { useTranslateStorage } from '@/stores/translate'
-import { computed, onMounted, reactive } from 'vue'
+import { computed, reactive } from 'vue'
 
 const translateStore = useTranslateStorage()
 const aboutProjectStore = useAboutProjectStore()
 
 let projectToShow = reactive(aboutProjectStore.project)
 let projectLanguage = computed(
-  () => aboutProjectStore.project.readeableInformation.filter(
-    (f) => f.languageName === translateStore.language
-    )[0]
+  () => aboutProjectStore.project.readeableInformation.filter((f) => f.languageName === translateStore.language)[0]
 )
 </script>
 

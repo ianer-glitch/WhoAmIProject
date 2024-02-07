@@ -4,7 +4,6 @@ import { LanguageEnum } from '@/enums/LanguageEnum'
 import router from '@/router'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { useAboutProjectStore } from '@/stores/aboutProjectStore'
-import { useTranslateStorage } from '@/stores/translate'
 import { computed, onMounted, reactive, ref } from 'vue'
 
 const projectList: Array<ProjectShowcaseItem> = [
