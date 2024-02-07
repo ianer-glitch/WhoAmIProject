@@ -6,6 +6,7 @@ export default class ProjectShowcaseItem {
   publishedLink?: string = ''
   tecnlogies: string[] = []
 
+  imageName: string = ''
   readeableInformation: Array<ProcjetShowcaseItemReadeable> = []
 }
 
@@ -13,6 +14,5 @@ export class ProcjetShowcaseItemReadeable {
   languageName: LanguageEnum = LanguageEnum.english
   name: string = ''
   description: string = ''
-  imageName: string = ''
   bannerName: string = ''
 }

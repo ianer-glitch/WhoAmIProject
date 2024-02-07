@@ -3,7 +3,7 @@ import HeaderPortfolio from '@/components/molecules/HeaderPortfolio.vue'
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full h-full">
     <HeaderPortfolio />
     <RouterView />
   </div>

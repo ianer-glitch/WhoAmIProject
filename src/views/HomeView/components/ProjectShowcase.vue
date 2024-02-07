@@ -1,30 +1,31 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
+import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import { LanguageEnum } from '@/enums/LanguageEnum'
 import router from '@/router'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { useAboutProjectStore } from '@/stores/aboutProjectStore'
 import { computed, onMounted, reactive, ref } from 'vue'
 
+const listVisible = ref(false)
 const projectList: Array<ProjectShowcaseItem> = [
   {
     id: '0',
     repositoryLink: '',
     tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS'],
+    imageName: '',
     readeableInformation: [
       {
         languageName: LanguageEnum.english,
         bannerName: '',
         description: 'This portfolio was created to show my skills as a developer!',
-        imageName: '',
-        name: ''
+        name: 'My Portfolio'
       },
       {
         languageName: LanguageEnum.brazilianPortuguese,
         bannerName: '',
         description: 'O portfólio foi criado para demonstrar minhas habilidades!',
-        imageName: '',
-        name: ''
+        name: 'Meu Portfólio'
       }
     ]
   }
@@ -53,7 +54,8 @@ onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && projectsToShow.length <= 5) {
+        if (entry.isIntersecting && !listVisible.value) {
+          listVisible.value = true
           mountProjectsArray()
         }
       })
@@ -66,8 +68,7 @@ onMounted(() => {
 let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 
 const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
-  const store = useAboutProjectStore()
-  store.project = projectItem
+  LocalStorageAboutViewController.setProjectAboutView(projectItem)
   router.push('/about')
 }
 </script>
