@@ -1,6 +1,6 @@
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
-const portfolioChildren : RouteRecordRaw[] = [
+const portfolioChildren: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
@@ -11,7 +11,6 @@ const portfolioChildren : RouteRecordRaw[] = [
     name: 'about',
     component: () => import('../../views/AboutProjectView/AboutProjectView.vue')
   }
-
 ]
 
 export default portfolioChildren

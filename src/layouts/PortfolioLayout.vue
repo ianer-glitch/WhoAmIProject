@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import HeaderPortfolio from '@/components/molecules/HeaderPortfolio.vue';
-
-
+import HeaderPortfolio from '@/components/molecules/HeaderPortfolio.vue'
 </script>
 
 <template>
-<div class="w-full">
-  <HeaderPortfolio/>
-  <RouterView/>
-</div>
+  <div class="w-full">
+    <HeaderPortfolio />
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

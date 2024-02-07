@@ -1,15 +1,15 @@
-[ ] alterar nome de aquivos css para WhoAmITheme.css e base.css
-[ ] alterar localização da pasta de composables
-[ ] criar o layout 
-[ ] converter o homer header no header geral da aplicação
-[ ] criar seletor de idiomas mais legal
-[ ] adiconar tema ligh mais bonito
-[ ] esclher o tema segundo preferências do sistema do usuario com media query
+[X] alterar nome de aquivos css para WhoAmITheme.css e base.css
+[X] alterar localização da pasta de composables
+[X] criar o layout 
+[X] converter o homer header no header geral da aplicação
+[X] criar seletor de idiomas mais legal
+[X] adiconar tema ligh mais bonito
+[X] esclher o tema segundo preferências do sistema do usuario com media query
+[X] adição do ícones das tecnologias
+[X] adição do ícone do linkedin no contac me
+[X] estilizar o contact me
 [ ] animação do texto expandir no aboutMe
 [ ] criação da página de detalhes
 [ ] adição das imagems dos projetos
-[ ] adição do ícones das tecnologias
-[ ] adição do ícone do linkedin no contac me
-[ ] estilizar o contact me
 [ ] crirar ícone/logo IRM.
 [ ] animação texto

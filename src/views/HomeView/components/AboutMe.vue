@@ -3,7 +3,6 @@ import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { computed } from 'vue'
 
 let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
-
 </script>
 
 <template>

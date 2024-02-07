@@ -1,43 +1,25 @@
 <script setup lang="ts">
-    const props = defineProps({
-      projetName:{
-        type:String,
-        default:""
-      },
+import { LanguageEnum } from '@/enums/LanguageEnum'
+import { useAboutProjectStore } from '@/stores/aboutProjectStore'
+import { useTranslateStorage } from '@/stores/translate'
+import { computed, onMounted, reactive } from 'vue'
 
-      description:{
-        type:String,
-        default:""
-      },
+const translateStore = useTranslateStorage()
+const aboutProjectStore = useAboutProjectStore()
 
-      bannerImageName:{
-        type:String,
-        default:""
-      },
-
-      tecnologiesUsed:{
-        type:Array<any>
-      },
-
-      publishedLink:{
-        type:String,
-        default:"",
-      },
-
-      githubLink:{
-        type:String,
-        default:""
-      }
-
-    })
-
+let projectToShow = reactive(aboutProjectStore.project)
+let projectLanguage = computed(
+  () => aboutProjectStore.project.readeableInformation.filter(
+    (f) => f.languageName === translateStore.language
+    )[0]
+)
 </script>
 
 <template>
   <div>
-    a
+    <h1>{{ projectToShow.tecnlogies }}</h1>
+    <h1>{{ projectLanguage.description }}</h1>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

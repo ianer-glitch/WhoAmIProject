@@ -1,18 +1,52 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
+import { LanguageEnum } from '@/enums/LanguageEnum'
+import router from '@/router'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
+import { useAboutProjectStore } from '@/stores/aboutProjectStore'
+import { useTranslateStorage } from '@/stores/translate'
 import { computed, onMounted, reactive, ref } from 'vue'
+
+const projectList: Array<ProjectShowcaseItem> = [
+  {
+    id: '0',
+    repositoryLink: '',
+    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS'],
+    readeableInformation: [
+      {
+        languageName: LanguageEnum.english,
+        bannerName: '',
+        description: 'This portfolio was created to show my skills as a developer!',
+        imageName: '',
+        name: ''
+      },
+      {
+        languageName: LanguageEnum.brazilianPortuguese,
+        bannerName: '',
+        description: 'O portfólio foi criado para demonstrar minhas habilidades!',
+        imageName: '',
+        name: ''
+      }
+    ]
+  }
+]
 
 let projectsToShow: Array<ProjectShowcaseItem> = reactive([])
 const mountProjectsArray = () => {
-  for (let i = 0; i <= 5; i++) {
+  projectList.forEach((f, index) => {
     setTimeout(() => {
-      const projectItem = new ProjectShowcaseItem()
-      projectItem.link = 'https://picsum.photos/200/200'
-      projectItem.name = 'Lorem Picsum'
-      projectsToShow.push(projectItem)
-    }, i * 100)
-  }
+      projectsToShow.push(f)
+    }, index * 100)
+  })
+
+  // for (let i = 0; i <= 5; i++) {
+  //   setTimeout(() => {
+  //     const projectItem = new ProjectShowcaseItem()
+  //     // projectItem.readeableInformation.imageName = 'https://picsum.photos/200/200'
+  //     // projectItem.readeableInformation.name = 'Lorem Picsum'
+  //     projectsToShow.push(projectItem)
+  //   }, i * 100)
+  // }
 }
 const projecListRef = ref(null)
 
@@ -31,6 +65,12 @@ onMounted(() => {
 })
 
 let text = computed(() => getPageTextsInCurrenctLanguageReactive())
+
+const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
+  const store = useAboutProjectStore()
+  store.project = projectItem
+  router.push('/about')
+}
 </script>
 
 <template>
@@ -47,12 +87,13 @@ let text = computed(() => getPageTextsInCurrenctLanguageReactive())
         >
           <figcaption>
             <!-- <label>{{ project.name }}</label> -->
+            <!-- :src="project.readeableInformation.imageName" -->
             <img
               class="image-project"
-              :src="project.link"
               width="250px"
               height="250px"
               loading="lazy"
+              @click="redirectToAbout(project)"
             />
           </figcaption>
         </li>

@@ -10,8 +10,8 @@ const router = createRouter({
       path: '/',
       name: 'Portfolio',
       component: () => import('../layouts/PortfolioLayout.vue'),
-      children: portfolioChildren,
-    },
+      children: portfolioChildren
+    }
   ]
 })
 

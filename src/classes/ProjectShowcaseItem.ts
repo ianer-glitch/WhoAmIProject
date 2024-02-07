@@ -1,5 +1,18 @@
+import { LanguageEnum } from '@/enums/LanguageEnum'
+
 export default class ProjectShowcaseItem {
-  name: string = ''
   id: string = ''
-  link: string = ''
+  repositoryLink: string = ''
+  publishedLink?: string = ''
+  tecnlogies: string[] = []
+
+  readeableInformation: Array<ProcjetShowcaseItemReadeable> = []
+}
+
+export class ProcjetShowcaseItemReadeable {
+  languageName: LanguageEnum = LanguageEnum.english
+  name: string = ''
+  description: string = ''
+  imageName: string = ''
+  bannerName: string = ''
 }
