@@ -4,6 +4,6 @@ export default class LocalStorageBaseController {
   }
 
   protected static getLocalStorage(key: string): any {
-    return JSON.parse(localStorage.getItem(key) ?? '')
+    return JSON.parse(localStorage.getItem(key) ?? '{}')
   }
 }

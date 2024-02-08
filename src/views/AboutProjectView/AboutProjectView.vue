@@ -1,16 +1,34 @@
 <script setup lang="ts">
+import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
 import Image from '@/components/atoms/Image.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
+import router from '@/router'
 import { useAboutProjectStore } from '@/stores/aboutProjectStore'
 import { useTranslateStorage } from '@/stores/translate'
-import { computed, reactive } from 'vue'
+import { computed, onMounted, reactive } from 'vue'
 
 const translateStore = useTranslateStorage()
 
+const hasProject = (project : ProjectShowcaseItem) :boolean =>{
+  return Object.values(project).length > 0
+}
 let projectToShow = computed(() => LocalStorageAboutViewController.getProjectAboutView())
+
 let readebleInfoProject = computed(
-  () => projectToShow.value.readeableInformation.filter((f) => f.languageName === translateStore.language)[0]
+  () =>{
+    if(hasProject(projectToShow.value)){
+    return  projectToShow.value.readeableInformation.filter((f) => f.languageName === translateStore.language)[0]
+    }
+    return new ProjectShowcaseItem().readeableInformation[0]
+  } 
 )
+
+
+onMounted(()=>{
+  if(!hasProject(projectToShow.value)){
+    router.back()
+  }
+})
 </script>
 
 <template>
