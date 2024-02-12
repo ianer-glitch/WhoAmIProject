@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
-import Image from '@/components/atoms/Image.vue'
+import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import router from '@/router'
-import { useAboutProjectStore } from '@/stores/aboutProjectStore'
 import { useTranslateStorage } from '@/stores/translate'
 import { computed, onMounted, reactive } from 'vue'
 
@@ -33,11 +32,12 @@ onMounted(()=>{
 
 <template>
   <section class="about-project-container">
-    <div class="image-title-container">
+   <ButtonBack @click="router.back()"/>
+    <figure class="image-title-container">
       <div class="project-banner">
         {{ projectToShow.imageName }}
       </div>
-    </div>
+    </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <h2>{{ readebleInfoProject.description }}</h2>
 

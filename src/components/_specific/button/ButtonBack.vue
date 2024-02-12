@@ -1,0 +1,25 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+    <button>
+        <i class="pi pi-arrow-left"></i>
+    </button>
+</template>
+
+<style scoped>
+button{
+    background-color: var(--bg-color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 12px;
+    color:var(--text-color-1);
+    
+}
+
+
+</style>
