@@ -18,8 +18,13 @@ button{
     height: 2.4rem;
     border-radius: 12px;
     color:var(--text-color-1);
+    transition:  all .2s ease-in-out;
     
 }
 
+button:is(:hover,:active){
+    scale:1.4;
+    box-shadow: 0px 0px 8px var(--text-color-1);
+}
 
 </style>
