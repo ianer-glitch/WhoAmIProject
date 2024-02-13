@@ -1,8 +1,8 @@
 @import './base.css';
 
 .light-theme {
-  --bg-color-1: #d8d3cd;
-  --bg-color-2: #f7f2e7;
+  --bg-color-1: #bcb8b2;
+  --bg-color-2: #e2ded5;
   --detail-color-1: #e0ece4;
   --detail-color-2: #797a7e;
   --text-color-1: black;

@@ -53,13 +53,12 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* background-color: tomato; */
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .project-banner {
-  background-color: aqua;
+  background-color: var(--detail-color-2);
   width: 100%;
   height: 250px;
   border-radius: 8px;
