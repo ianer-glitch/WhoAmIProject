@@ -4,7 +4,7 @@ import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import router from '@/router'
 import { useTranslateStorage } from '@/stores/translate'
-import { computed, onMounted, reactive } from 'vue'
+import { computed, onMounted } from 'vue'
 
 const translateStore = useTranslateStorage()
 
@@ -37,6 +37,11 @@ onMounted(() => {
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <h2>{{ readebleInfoProject.description }}</h2>
+    <ul>
+      <li v-for="tec,index in projectToShow.tecnlogies" :key="index">
+        <p>{{ tec }}</p>
+      </li>
+    </ul>
   </section>
 </template>
 

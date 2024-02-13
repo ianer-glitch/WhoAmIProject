@@ -24,7 +24,7 @@ const projectList: Array<ProjectShowcaseItem> = [
       {
         languageName: LanguageEnum.brazilianPortuguese,
         bannerName: '',
-        description: 'O portfólio foi criado para demonstrar minhas habilidades!',
+        description: 'Este portfólio foi criado para demonstrar minhas habilidades! Ele é um compilado de todas as minhas experiências ao longo dos anos.',
         name: 'Meu Portfólio'
       }
     ]
