@@ -21,6 +21,5 @@ import LanguageSelector from '@/components/atoms/LanguageSelector.vue'
   height: 8vh;
   position: static;
   top: 0;
-  
 }
 </style>

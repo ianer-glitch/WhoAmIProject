@@ -20,10 +20,10 @@
         "title": "Entre em Contato"
       }
     },
-    "about":{
-      "aboutProject":{
-        "githubLabel":"Ver Repositório",
-        "publishedLabel":"Acessar Projeto Publicado"
+    "about": {
+      "aboutProject": {
+        "githubLabel": "Ver Repositório",
+        "publishedLabel": "Acessar Projeto Publicado"
       }
     }
   },
@@ -48,10 +48,10 @@
         "title": "Contact Me"
       }
     },
-    "about":{
-      "aboutProject":{
-        "githubLabel":"See Repository",
-        "publishedLabel":"Go to Published Project"
+    "about": {
+      "aboutProject": {
+        "githubLabel": "See Repository",
+        "publishedLabel": "Go to Published Project"
       }
     }
   }

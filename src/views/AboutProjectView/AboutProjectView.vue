@@ -45,32 +45,44 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
       </div>
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
-    <p v-for="paragraph,index in readebleInfoProject.description "
-     :key="index">
+    <p
+      v-for="(paragraph, index) in readebleInfoProject.description"
+      :key="index"
+    >
       {{ paragraph }}
     </p>
-    <ul class="tecnologies-container" >
-      <li class="tec-item" 
-      v-for="tec,index in projectToShow.tecnlogies" 
-      :key="index">
-        <p><em>{{ tec }}</em></p>
+    <ul class="tecnologies-container">
+      <li
+        class="tec-item"
+        v-for="(tec, index) in projectToShow.tecnlogies"
+        :key="index"
+      >
+        <p>
+          <em>{{ tec }}</em>
+        </p>
       </li>
     </ul>
 
-    <ul v-if="projectToShow.repositoryLink || projectToShow.publishedLink" 
-    class="redirect-to-project-container">
+    <ul
+      v-if="projectToShow.repositoryLink || projectToShow.publishedLink"
+      class="redirect-to-project-container"
+    >
       <li v-if="projectToShow.repositoryLink">
-        <figure 
-          @click="redirectToOutside(projectToShow.publishedLink)" 
-          class="redirect-item">
+        <figure
+          @click="redirectToOutside(projectToShow.publishedLink)"
+          class="redirect-item"
+        >
           <i class="pi pi-github redirect-icon"></i>
-          <label>{{texts.aboutProject.githubLabel}}</label>
+          <label>{{ texts.aboutProject.githubLabel }}</label>
         </figure>
       </li>
       <li v-if="projectToShow.publishedLink">
-        <figure @click="redirectToOutside(projectToShow.publishedLink)" class="redirect-item">
+        <figure
+          @click="redirectToOutside(projectToShow.publishedLink)"
+          class="redirect-item"
+        >
           <i class="pi pi-globe redirect-icon"></i>
-          <label>{{texts.aboutProject.publishedLabel}}</label>
+          <label>{{ texts.aboutProject.publishedLabel }}</label>
         </figure>
       </li>
     </ul>
@@ -78,61 +90,55 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 </template>
 
 <style scoped>
-.redirect-icon{
-  transition: all .2s ease-in-out;
+.redirect-icon {
+  transition: all 0.2s ease-in-out;
   font-size: 2rem;
-  
 }
-.redirect-item{
-  display:flex;
+.redirect-item {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .4rem;
-  
+  gap: 0.4rem;
 }
 
-.redirect-item:is(:hover,:active) .redirect-icon{
+.redirect-item:is(:hover, :active) .redirect-icon {
   scale: 2;
   transform: translateY(-1rem);
-  
 }
-.redirect-item:is(:hover,:active),.redirect-item:is(:hover,:active) label{
+.redirect-item:is(:hover, :active),
+.redirect-item:is(:hover, :active) label {
   cursor: pointer;
-
 }
-.redirect-to-project-container{
+.redirect-to-project-container {
   background-color: var(--bg-color-1);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:2rem;
-  width:100%;
+  gap: 2rem;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 16px;
   color: var(--text-color-1);
 }
-.tecnologies-container{
+.tecnologies-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;;
+  gap: 1rem;
 }
-.tec-item{
+.tec-item {
   background-color: var(--bg-color-1);
-  padding: .8rem;
+  padding: 0.8rem;
   font-weight: bold;
   border-radius: 8px;
   /* box-shadow: 1px 1px 2px 1px var(--text-color-1); */
   /* border:1px solid tomato; */
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   pointer-events: none;
 }
-
-
-
 
 .about-project-container {
   width: 90%;

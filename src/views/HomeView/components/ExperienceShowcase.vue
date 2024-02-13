@@ -54,7 +54,6 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>): 
       experienceList.push(item)
     }, 200 * index)
   })
- 
 }
 
 const containerHeigt = computed(() => `calc(4.6rem* ${internalExperienceList.length})`)
@@ -62,10 +61,9 @@ const containerHeigt = computed(() => `calc(4.6rem* ${internalExperienceList.len
 const emit = defineEmits(['reloadList'])
 
 let experienceListKey = ref(0)
-languageWatch(()=>{
+languageWatch(() => {
   emit('reloadList')
 })
-
 </script>
 
 <template>
