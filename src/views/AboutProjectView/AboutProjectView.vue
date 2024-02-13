@@ -3,6 +3,7 @@ import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
 import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import router from '@/router'
+import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { useTranslateStorage } from '@/stores/translate'
 import { computed, onMounted } from 'vue'
 
@@ -25,6 +26,14 @@ onMounted(() => {
     router.back()
   }
 })
+
+const redirectToOutside = (link?: string): void => {
+  if (link) {
+    window.open(link)
+  }
+}
+
+let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 </script>
 
 <template>
@@ -40,7 +49,6 @@ onMounted(() => {
      :key="index">
       {{ paragraph }}
     </p>
-
     <ul class="tecnologies-container" >
       <li class="tec-item" 
       v-for="tec,index in projectToShow.tecnlogies" 
@@ -49,11 +57,62 @@ onMounted(() => {
       </li>
     </ul>
 
-    
+    <ul v-if="projectToShow.repositoryLink || projectToShow.publishedLink" 
+    class="redirect-to-project-container">
+      <li v-if="projectToShow.repositoryLink">
+        <figure 
+          @click="redirectToOutside(projectToShow.publishedLink)" 
+          class="redirect-item">
+          <i class="pi pi-github redirect-icon"></i>
+          <label>{{texts.aboutProject.githubLabel}}</label>
+        </figure>
+      </li>
+      <li v-if="projectToShow.publishedLink">
+        <figure @click="redirectToOutside(projectToShow.publishedLink)" class="redirect-item">
+          <i class="pi pi-globe redirect-icon"></i>
+          <label>{{texts.aboutProject.publishedLabel}}</label>
+        </figure>
+      </li>
+    </ul>
   </section>
 </template>
 
 <style scoped>
+.redirect-icon{
+  transition: all .2s ease-in-out;
+  font-size: 2rem;
+  
+}
+.redirect-item{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  
+}
+
+.redirect-item:is(:hover,:active) .redirect-icon{
+  scale: 2;
+  transform: translateY(-1rem);
+  
+}
+.redirect-item:is(:hover,:active),.redirect-item:is(:hover,:active) label{
+  cursor: pointer;
+
+}
+.redirect-to-project-container{
+  background-color: var(--bg-color-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2rem;
+  width:100%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 16px;
+  color: var(--text-color-1);
+}
 .tecnologies-container{
   display: flex;
   align-items: center;

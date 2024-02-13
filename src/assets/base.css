@@ -32,6 +32,7 @@ p {
   --h2-font-size: 1.8rem;
   --h3-font-size: 1.2rem;
   --p-font-size: .9rem;
+  --label-font-size:1rem;
   --font-proportion: 1;
 }
 
@@ -51,9 +52,13 @@ p {
   font-size: calc(var(--p-font-size) * var(--font-proportion));
 }
 
+label {
+  font-size: calc(var(--label-font-size) * var(--font-proportion));
+}
+
 @media (min-width: 300px) {
   :root {
-    --font-proportion: 0.8;
+    --font-proportion: 1;
   }
 }
 

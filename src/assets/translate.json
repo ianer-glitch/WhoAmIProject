@@ -19,6 +19,12 @@
       "contactMe": {
         "title": "Entre em Contato"
       }
+    },
+    "about":{
+      "aboutProject":{
+        "githubLabel":"Ver Repositório",
+        "publishedLabel":"Acessar Projeto Publicado"
+      }
     }
   },
   "en-US": {
@@ -40,6 +46,12 @@
       },
       "contactMe": {
         "title": "Contact Me"
+      }
+    },
+    "about":{
+      "aboutProject":{
+        "githubLabel":"See Repository",
+        "publishedLabel":"Go to Published Project"
       }
     }
   }
