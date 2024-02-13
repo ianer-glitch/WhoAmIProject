@@ -9,8 +9,9 @@
 [X] adição do ícone do linkedin no contac me
 [X] estilizar o contact me
 
-[ ] criação da página de detalhes
+[X] criação da página de detalhes
+[X] seções no about project
 [ ] adição das imagems dos projetos
+[ ] adião da fonte ao projeto
 [ ] crirar ícone/logo IRM.
-[ ] seções no about project
 [ ] corrigir gramática geral

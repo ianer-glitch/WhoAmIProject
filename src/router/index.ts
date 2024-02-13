@@ -25,7 +25,6 @@ router.afterEach(() => {
   setTimeout(() => {
     const pageTransitionStore = usePageTransitionStore()
     pageTransitionStore.isPageLoading = false
-    console.info(pageTransitionStore.isPageLoading)
   }, 2000)
 })
 

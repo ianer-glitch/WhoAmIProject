@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import ExperienceItemProps from '@/classes/ExperienceItemProps'
 import ExperienceItem from '@/components/molecules/ExperienceItem.vue'
-import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
+import { getPageTextsInCurrenctLanguageReactive, languageWatch } from '@/shared/languageCommon'
+
 import { computed, onMounted, reactive, ref } from 'vue'
 
 let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 
 let experienceList: Array<ExperienceItemProps> = reactive([])
+
 const experienceListRef = ref(null)
 let listVisible = ref(false)
 
@@ -52,9 +54,18 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>): 
       experienceList.push(item)
     }, 200 * index)
   })
+ 
 }
 
 const containerHeigt = computed(() => `calc(4.6rem* ${internalExperienceList.length})`)
+
+const emit = defineEmits(['reloadList'])
+
+let experienceListKey = ref(0)
+languageWatch(()=>{
+  emit('reloadList')
+})
+
 </script>
 
 <template>
@@ -68,7 +79,7 @@ const containerHeigt = computed(() => `calc(4.6rem* ${internalExperienceList.len
         <li
           class="w-full flex items-center justify-center"
           v-for="(exp, index) in experienceList"
-          :key="index"
+          :key="index + experienceListKey"
         >
           <ExperienceItem
             :title="exp.title"

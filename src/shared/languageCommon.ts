@@ -23,4 +23,15 @@ const getPageTextsInCurrenctLanguageReactive = (): any => {
   return pageTexts
 }
 
-export { getPageTextsInCurrenctLanguageReactive }
+const languageWatch = (func : Function):void =>{
+  const store = useTranslateStorage()
+
+  watch(
+    () => store.language,
+    (newValue) => {
+      func(newValue)
+    }
+  )
+}
+
+export { getPageTextsInCurrenctLanguageReactive,languageWatch }
