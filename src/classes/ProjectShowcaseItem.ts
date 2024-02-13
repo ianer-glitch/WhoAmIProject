@@ -13,6 +13,6 @@ export default class ProjectShowcaseItem {
 export class ProcjetShowcaseItemReadeable {
   languageName: LanguageEnum = LanguageEnum.english
   name: string = ''
-  description: string = ''
+  description: string[] = []
   bannerName: string = ''
 }

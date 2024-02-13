@@ -1,35 +1,13 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
-import { LanguageEnum } from '@/enums/LanguageEnum'
 import router from '@/router'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
-import { useAboutProjectStore } from '@/stores/aboutProjectStore'
 import { computed, onMounted, reactive, ref } from 'vue'
+import projectListForShowcase from '@/shared/projectListForShowcase'
 
 const listVisible = ref(false)
-const projectList: Array<ProjectShowcaseItem> = [
-  {
-    id: '0',
-    repositoryLink: '',
-    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS'],
-    imageName: '',
-    readeableInformation: [
-      {
-        languageName: LanguageEnum.english,
-        bannerName: '',
-        description: 'This portfolio was created to show my skills as a developer!',
-        name: 'My Portfolio'
-      },
-      {
-        languageName: LanguageEnum.brazilianPortuguese,
-        bannerName: '',
-        description: 'Este portfólio foi criado para demonstrar minhas habilidades! Ele é um compilado de todas as minhas experiências ao longo dos anos.',
-        name: 'Meu Portfólio'
-      }
-    ]
-  }
-]
+const projectList = projectListForShowcase
 
 let projectsToShow: Array<ProjectShowcaseItem> = reactive([])
 const mountProjectsArray = () => {

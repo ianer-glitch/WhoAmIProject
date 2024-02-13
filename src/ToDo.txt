@@ -8,8 +8,9 @@
 [X] adição do ícones das tecnologias
 [X] adição do ícone do linkedin no contac me
 [X] estilizar o contact me
-[ ] animação do texto expandir no aboutMe
+
 [ ] criação da página de detalhes
 [ ] adição das imagems dos projetos
 [ ] crirar ícone/logo IRM.
-[ ] animação texto
+[ ] seções no about project
+[ ] corrigir gramática geral

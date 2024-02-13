@@ -36,23 +36,52 @@ onMounted(() => {
       </div>
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
-    <h2>{{ readebleInfoProject.description }}</h2>
-    <ul>
-      <li v-for="tec,index in projectToShow.tecnlogies" :key="index">
-        <p>{{ tec }}</p>
+    <p v-for="paragraph,index in readebleInfoProject.description "
+     :key="index">
+      {{ paragraph }}
+    </p>
+
+    <ul class="tecnologies-container" >
+      <li class="tec-item" 
+      v-for="tec,index in projectToShow.tecnlogies" 
+      :key="index">
+        <p><em>{{ tec }}</em></p>
       </li>
     </ul>
+
+    
   </section>
 </template>
 
 <style scoped>
+.tecnologies-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;;
+}
+.tec-item{
+  background-color: var(--bg-color-1);
+  padding: .8rem;
+  font-weight: bold;
+  border-radius: 8px;
+  /* box-shadow: 1px 1px 2px 1px var(--text-color-1); */
+  /* border:1px solid tomato; */
+  transition: all .2s ease-in-out;
+  pointer-events: none;
+}
+
+
+
+
 .about-project-container {
   width: 90%;
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 .image-title-container {
   display: flex;
