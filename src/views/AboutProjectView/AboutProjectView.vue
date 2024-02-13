@@ -8,23 +8,20 @@ import { computed, onMounted, reactive } from 'vue'
 
 const translateStore = useTranslateStorage()
 
-const hasProject = (project : ProjectShowcaseItem) :boolean =>{
+const hasProject = (project: ProjectShowcaseItem): boolean => {
   return Object.values(project).length > 0
 }
 let projectToShow = computed(() => LocalStorageAboutViewController.getProjectAboutView())
 
-let readebleInfoProject = computed(
-  () =>{
-    if(hasProject(projectToShow.value)){
-    return  projectToShow.value.readeableInformation.filter((f) => f.languageName === translateStore.language)[0]
-    }
-    return new ProjectShowcaseItem().readeableInformation[0]
-  } 
-)
+let readebleInfoProject = computed(() => {
+  if (hasProject(projectToShow.value)) {
+    return projectToShow.value.readeableInformation.filter((f) => f.languageName === translateStore.language)[0]
+  }
+  return new ProjectShowcaseItem().readeableInformation[0]
+})
 
-
-onMounted(()=>{
-  if(!hasProject(projectToShow.value)){
+onMounted(() => {
+  if (!hasProject(projectToShow.value)) {
     router.back()
   }
 })
@@ -32,7 +29,7 @@ onMounted(()=>{
 
 <template>
   <section class="about-project-container">
-   <ButtonBack @click="router.back()"/>
+    <ButtonBack @click="router.back()" />
     <figure class="image-title-container">
       <div class="project-banner">
         {{ projectToShow.imageName }}
@@ -40,19 +37,17 @@ onMounted(()=>{
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <h2>{{ readebleInfoProject.description }}</h2>
-
-    
   </section>
 </template>
 
 <style scoped>
 .about-project-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap: 1rem;
 }
 .image-title-container {
   display: flex;

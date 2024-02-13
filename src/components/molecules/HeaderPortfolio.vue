@@ -16,10 +16,11 @@ import LanguageSelector from '@/components/atoms/LanguageSelector.vue'
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(50px);
-  width: 100vw;
+  width: 90%;
+  margin: 0 auto;
   height: 8vh;
   position: static;
   top: 0;
-  padding: 1rem;
+  
 }
 </style>

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import portfolioChildren from './childrenRoutes/portfolioChildren'
+import { usePageTransitionStore } from '@/stores/pageTransitionStore'
 
 // Routes children name must match in translate.json
 
@@ -13,6 +14,19 @@ const router = createRouter({
       children: portfolioChildren
     }
   ]
+})
+
+router.beforeEach(() => {
+  const pageTransitionStore = usePageTransitionStore()
+  pageTransitionStore.isPageLoading = true
+})
+
+router.afterEach(() => {
+  setTimeout(() => {
+    const pageTransitionStore = usePageTransitionStore()
+    pageTransitionStore.isPageLoading = false
+    console.info(pageTransitionStore.isPageLoading)
+  }, 2000)
 })
 
 export default router

@@ -1,16 +1,16 @@
 <script setup lang="ts">
- const props=defineProps({
-    duration:{
-        default:'.2s',
-        type:String
-    }
- })
+const props = defineProps({
+  duration: {
+    default: '.2s',
+    type: String
+  }
+})
 </script>
 
 <template>
-    <Transition name="fade">
-        <slot></slot>
-    </Transition>
+  <Transition name="fade">
+    <slot></slot>
+  </Transition>
 </template>
 
 <style scoped>
@@ -21,6 +21,5 @@
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-
 }
 </style>
