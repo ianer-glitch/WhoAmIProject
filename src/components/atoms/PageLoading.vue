@@ -14,7 +14,7 @@
   left: 0;
   opacity: 0.95;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   position: absolute;
   pointer-events: none;

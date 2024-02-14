@@ -10,8 +10,8 @@ import router from '@/router'
 
 <style scoped>
 figure {
-  width: 10rem;
-
+  
+  width: 5rem;
   height: 100%;
   border-radius: 12px;
   background-color: var(--bg-color-1);
@@ -22,10 +22,11 @@ figure {
   transition: all 0.2s ease-in-out;
 }
 
-figure:hover {
-  cursor: pointer;
-  transform: translateY(0.6rem);
-  scale: 1.4;
-  box-shadow: 1px 1px 10px 1px var(--text-color-1);
+
+
+@media (min-width: 600px) {
+  figure{
+    width: 10rem;  
+  }
 }
 </style>

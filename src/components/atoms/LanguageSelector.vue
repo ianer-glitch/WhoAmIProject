@@ -73,7 +73,7 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   font-weight: bold;
 }
 .active {
-  background-color: var(--detail-color-1);
+  background-color: var(--detail-color-2);
   padding: 0.4rem;
   height: 100%;
   border-radius: 8px;
