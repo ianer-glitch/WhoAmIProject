@@ -56,6 +56,8 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+  height: 100%;
+  
 }
 .language-container {
   display: flex;
@@ -64,7 +66,8 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   width: fit-content;
   gap: 1rem;
   border-radius: 16px;
-  height: 2rem;
+  /* height: 100%; */
+  /* height: 2rem; */
 }
 .item {
   cursor: pointer;
