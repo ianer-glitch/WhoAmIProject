@@ -16,7 +16,7 @@ const props = defineProps({
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: all v-bind('$props.duration') ease;
+  transition: all v-bind('props.duration') ease;
 }
 .fade-enter-from,
 .fade-leave-to {

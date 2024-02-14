@@ -57,7 +57,6 @@ const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   justify-content: flex-start;
   gap: 1rem;
   height: 100%;
-  
 }
 .language-container {
   display: flex;
