@@ -42,25 +42,14 @@ const src = computed(() => getImageFilePath(props.imgName))
 </script>
 
 <template>
-  <figure>
     <img
       :src="src"
       :alt="alt"
       :width="width"
       :height="height"
       :loading="loading as any"
-    />
-    <figcaption :class="{ 'hide-figcaption': !props.showImgDescription }">{{ props.imgDescription }}</figcaption>
-  </figure>
+    >
 </template>
 
 <style scoped>
-.hide-figcaption {
-  /* hide like this to be useful for accessibility tools */
-  position: absolute;
-  left: -999px;
-}
-img {
-  background-color: aqua;
-}
 </style>
