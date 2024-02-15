@@ -15,7 +15,6 @@ themeWatch((newTheme : ThemeEnum)=>{
 <template>
   <figure @click="router.push('/')">
     <Image class="logo" :img-name="imgName"/>
-    <!-- <img  alt="Logo" /> -->
   </figure>
 </template>
 
