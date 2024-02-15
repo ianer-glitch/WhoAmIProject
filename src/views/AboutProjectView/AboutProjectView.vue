@@ -161,7 +161,7 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 }
 
 .project-banner {
-  background-color: var(--text-color-1);
+  background-color: var(--contrast-color-1);
   width: 100%;
   height: 250px;
   border-radius: 8px;

@@ -16,13 +16,13 @@ const yearsString = text.value.experienceShowcase.years
 const months = text.value.experienceShowcase.months
 const internalExperienceList: Array<ExperienceItemProps> = [
   new ExperienceItemProps('VueJs', `1,5 ${yearsString}`, 'vue-js-icon.svg'),
-  new ExperienceItemProps('PrimeVue', `1,5 ${yearsString}`, ''),
+  new ExperienceItemProps('PrimeVue', `1,5 ${yearsString}`, 'primevue-logo.svg'),
   new ExperienceItemProps('HTML', `1,5 ${yearsString}`, 'HTML5_Logo.svg'),
   new ExperienceItemProps('CSS', `1,5 ${yearsString}`, 'CSS3_logo_and_wordmark.svg'),
   new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg'),
   new ExperienceItemProps('Docker', `6 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
-  new ExperienceItemProps('TailWind', `6 ${months}`, ''),
-  new ExperienceItemProps('JavasScript', `1,5 ${yearsString}`, 'Javascript-shield.svg'),
+  new ExperienceItemProps('Tailwind', `6 ${months}`, 'Tailwind-logo.svg'),
+  new ExperienceItemProps('JavasScript', `1,5 ${yearsString}`, 'js-logo.svg'),
   new ExperienceItemProps('C#', `1,5 ${yearsString}`, 'Logo_C_sharp.svg'),
   new ExperienceItemProps('.Net', `1,5 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('LinQ', `1,5 ${yearsString}`, 'Net.png'),

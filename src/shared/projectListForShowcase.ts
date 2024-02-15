@@ -6,7 +6,7 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
     id: '0',
     publishedLink: 'https://google.com',
     repositoryLink: 'https://google.com',
-    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS', 'TailWind', 'PrimeVue'],
+    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS', 'Tailwind', 'PrimeVue'],
     imageName: 'portfolio-logo.png',
     readeableInformation: [
       {
