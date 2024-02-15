@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
 import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
+import Image from '@/components/atoms/Image.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import router from '@/router'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
@@ -40,9 +41,12 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
   <section class="about-project-container">
     <ButtonBack @click="router.back()" />
     <figure class="image-title-container">
-      <div class="project-banner">
-        {{ projectToShow.imageName }}
-      </div>
+      <Image class="project-banner"
+          loading="lazy"
+          :img-name="projectToShow.imageName"
+          isBackground
+      />
+      
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <p
@@ -157,7 +161,7 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 }
 
 .project-banner {
-  background-color: var(--detail-color-2);
+  background-color: var(--text-color-1);
   width: 100%;
   height: 250px;
   border-radius: 8px;

@@ -5,6 +5,8 @@ import router from '@/router'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { computed, onMounted, reactive, ref } from 'vue'
 import projectListForShowcase from '@/shared/projectListForShowcase'
+import Image from '@/components/atoms/Image.vue'
+import { getFilePath } from '@/shared/files'
 
 const listVisible = ref(false)
 const projectList = projectListForShowcase
@@ -49,6 +51,10 @@ const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
   LocalStorageAboutViewController.setProjectAboutView(projectItem)
   router.push('/about')
 }
+
+const getImagePath = (fileName : string) =>{
+  return `url(${getFilePath(fileName)})`
+}
 </script>
 
 <template>
@@ -66,11 +72,13 @@ const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
           <figcaption>
             <!-- <label>{{ project.name }}</label> -->
             <!-- :src="project.readeableInformation.imageName" -->
-            <img
+            <Image
               class="image-project"
               width="250px"
               height="250px"
               loading="lazy"
+              :img-name="project.imageName"
+              isBackground
               @click="redirectToAbout(project)"
             />
           </figcaption>
@@ -84,6 +92,7 @@ const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
 .image-project {
   transition: all 0.2s ease-in-out;
   border-radius: 12px;
+  
 }
 .image-project:is(:hover, :focus) {
   scale: 1.1;

@@ -35,21 +35,35 @@ const props = defineProps({
   loading: {
     type: String,
     default: ''
+  },
+  isBackground:{
+    type:Boolean,
+    default:false
   }
 })
 
 const src = computed(() => getImageFilePath(props.imgName))
+const bgPath = computed(() => `url(${getImageFilePath(props.imgName)})`)
 </script>
 
 <template>
     <img
-      :src="src"
+      :src="!props.isBackground ? src : ''"
       :alt="alt"
       :width="width"
       :height="height"
       :loading="loading as any"
+      :class="{'background' : isBackground}"
     >
 </template>
 
 <style scoped>
+.background{
+  background-image: v-bind('bgPath');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
 </style>
