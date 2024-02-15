@@ -41,12 +41,12 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
   <section class="about-project-container">
     <ButtonBack @click="router.back()" />
     <figure class="image-title-container">
-      <Image class="project-banner"
-          loading="lazy"
-          :img-name="projectToShow.imageName"
-          isBackground
+      <Image
+        class="project-banner"
+        loading="lazy"
+        :img-name="projectToShow.imageName"
+        isBackground
       />
-      
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <p

@@ -1,5 +1,5 @@
-import { useThemeStore } from "@/stores/themeStore"
-import { watch } from "vue"
+import { useThemeStore } from '@/stores/themeStore'
+import { watch } from 'vue'
 
 const themeWatch = (func: Function): void => {
   const store = useThemeStore()
@@ -12,4 +12,4 @@ const themeWatch = (func: Function): void => {
   )
 }
 
-export {themeWatch}
+export { themeWatch }

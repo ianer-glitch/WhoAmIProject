@@ -52,7 +52,7 @@ const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
   router.push('/about')
 }
 
-const getImagePath = (fileName : string) =>{
+const getImagePath = (fileName: string) => {
   return `url(${getFilePath(fileName)})`
 }
 </script>
@@ -92,7 +92,6 @@ const getImagePath = (fileName : string) =>{
 .image-project {
   transition: all 0.2s ease-in-out;
   border-radius: 12px;
-  
 }
 .image-project:is(:hover, :focus) {
   scale: 1.1;
