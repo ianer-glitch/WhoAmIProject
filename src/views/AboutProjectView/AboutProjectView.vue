@@ -73,7 +73,7 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
     >
       <li v-if="projectToShow.repositoryLink">
         <figure
-          @click="redirectToOutside(projectToShow.publishedLink)"
+          @click="redirectToOutside(projectToShow.repositoryLink)"
           class="redirect-item"
         >
           <i class="pi pi-github redirect-icon"></i>
