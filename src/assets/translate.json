@@ -3,8 +3,7 @@
     "Home": {
       "aboutMe": {
         "greetings": "Olá, eu sou Ian R. Malavazi, muito prazer!",
-        "description": "Sou um Desenvolvedor Web Full Stack, apaixondado por tecnologia",
-        "keyWords": ["Desenvolvedor", "Ian", "R.", "Malavazi", "tecnologia", "web"]
+        "description": "Sou um Desenvolvedor Web Full Stack, apaixondado por tecnologia e em como o software pode ajudar as pessoas no dia a dia."
       },
       "projectShowcase": {
         "title": "Projetos Pessoais"
@@ -31,8 +30,8 @@
     "Home": {
       "aboutMe": {
         "greetings": "Hi, I'm Ian R. Malavazi, Nice to meet you!",
-        "description": "I'm a FullStack developer that loves technology",
-        "keyWords": []
+        "description": "I'm a FullStack developer that loves technology and how software can help the day of people."
+        
       },
       "projectShowcase": {
         "title": "Personal Projects"
@@ -51,7 +50,7 @@
     "about": {
       "aboutProject": {
         "githubLabel": "See Repository",
-        "publishedLabel": "Go to Published Project"
+        "publishedLabel": "Go to Project"
       }
     }
   }
