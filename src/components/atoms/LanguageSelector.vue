@@ -15,23 +15,21 @@ watch(
   }
 )
 
-
 const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   const html = document.querySelector('html')
   html?.setAttribute('language', languageAbreviation)
 }
 
-onMounted(()=>{
+onMounted(() => {
   const browserLanguage = navigator.language
-  const arrayLanguages = Object.values(LanguageEnum) as Array<string>    
-    console.info(navigator.language)
-    if (arrayLanguages.includes(browserLanguage)) {
-      store.language = navigator.language as any
-      setSelectedLanguageOnHtml(store.language)
-      selectedLanguage.value = store.language
-    }
+  const arrayLanguages = Object.values(LanguageEnum) as Array<string>
+  console.info(navigator.language)
+  if (arrayLanguages.includes(browserLanguage)) {
+    store.language = navigator.language as any
+    setSelectedLanguageOnHtml(store.language)
+    selectedLanguage.value = store.language
+  }
 })
-
 </script>
 
 <template>

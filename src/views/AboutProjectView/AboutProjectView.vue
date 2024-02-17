@@ -37,19 +37,14 @@ const redirectToOutside = (link?: string): void => {
 
 let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 
-const imgBackgroundUrl= computed(()=>`url(${getImageFilePath(projectToShow.value.imageName)})`)
-
+const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.value.imageName)})`)
 </script>
 
 <template>
-
   <section class="about-project-container">
     <ButtonBack @click="router.back()" />
     <figure class="image-title-container">
-      <div
-        class="project-banner"
-        
-      ></div>
+      <div class="project-banner"></div>
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <p
@@ -172,7 +167,6 @@ const imgBackgroundUrl= computed(()=>`url(${getImageFilePath(projectToShow.value
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  
 }
 
 .project-name {

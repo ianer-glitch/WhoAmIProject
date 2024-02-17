@@ -8,21 +8,18 @@ import { useThemeStore } from '@/stores/themeStore'
 
 let imgName = ref('irm-logo-white.svg')
 
-const setLogo = (currenctTheme : ThemeEnum) => {
+const setLogo = (currenctTheme: ThemeEnum) => {
   imgName.value = currenctTheme === ThemeEnum.Dark ? 'irm-logo-white.svg' : 'irm-logo.svg'
 }
-
 
 themeWatch((newTheme: ThemeEnum) => {
   setLogo(newTheme)
 })
 
-
-onMounted(()=>{
+onMounted(() => {
   const store = useThemeStore()
   setLogo(store.currenctTheme)
 })
-
 </script>
 
 <template>

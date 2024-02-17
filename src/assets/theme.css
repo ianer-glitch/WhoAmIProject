@@ -7,7 +7,7 @@
   --detail-color-1: #e0ece4;
   --detail-color-2: #797a7e;
   --text-color-1: black;
-  --contrast-color-1:black;
+  --contrast-color-1: black;
 }
 
 .dark-theme {
@@ -17,5 +17,5 @@
   --detail-color-1: #00bbc5;
   --detail-color-2: #00dfd7;
   --text-color-1: white;
-  --contrast-color-1:white;
+  --contrast-color-1: white;
 }

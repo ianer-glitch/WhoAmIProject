@@ -14,8 +14,8 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
         bannerName: '',
         description: [
           'This portfolio was created to show my developer skills !',
-          'It\'s is a compilation of all my experiences and a sucessfull Frontend implementation of atomic desing.',
-          'A user that acess the app can choose between Portuguese language or English Language, light theme or dark theme and it can automatically choose based on the person\'s preference.',
+          "It's is a compilation of all my experiences and a sucessfull Frontend implementation of atomic desing.",
+          "A user that acess the app can choose between Portuguese language or English Language, light theme or dark theme and it can automatically choose based on the person's preference.",
           'My goal here is show my best projects to everyone!'
         ],
         name: 'My Portfolio'

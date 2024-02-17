@@ -74,11 +74,10 @@ label {
   font-style: normal;
   font-weight: 400;
   src: url('.fonts/nunito-v25-latin/nunito-v25-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
+  src:
+    local(''),
+    url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('./fonts/nunito-v25-latin/nunito-v25-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
 }
-
-

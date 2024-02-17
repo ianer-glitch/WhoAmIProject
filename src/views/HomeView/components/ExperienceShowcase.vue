@@ -30,7 +30,7 @@ const internalExperienceList: Array<ExperienceItemProps> = [
   new ExperienceItemProps('SQL', `1,8 ${yearsString}`, 'sql-server.svg'),
   new ExperienceItemProps('Entity Framework', `1,8 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('Dapper ORM', `1,8 ${yearsString}`, 'dapper.png'),
-  new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg'),
+  new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg')
 ]
 
 onMounted(() => {
