@@ -4,6 +4,7 @@ import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
 import Image from '@/components/atoms/Image.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import router from '@/router'
+import { getImageFilePath } from '@/shared/files'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { useTranslateStorage } from '@/stores/translate'
 import { computed, onMounted } from 'vue'
@@ -35,18 +36,20 @@ const redirectToOutside = (link?: string): void => {
 }
 
 let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
+
+const imgBackgroundUrl= computed(()=>`url(${getImageFilePath(projectToShow.value.imageName)})`)
+
 </script>
 
 <template>
+
   <section class="about-project-container">
     <ButtonBack @click="router.back()" />
     <figure class="image-title-container">
-      <Image
+      <img
         class="project-banner"
-        loading="lazy"
-        :img-name="projectToShow.imageName"
-        isBackground
-      />
+        alt="logo"
+      >
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <p
@@ -165,6 +168,10 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
   width: 100%;
   height: 250px;
   border-radius: 8px;
+  background-image: v-bind('imgBackgroundUrl');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   
 }
 

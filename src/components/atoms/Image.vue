@@ -48,12 +48,13 @@ const bgPath = computed(() => `url(${getImageFilePath(props.imgName)})`)
 
 <template>
   <img
+
     :src="src"
     :alt="alt"
     :width="width"
     :height="height"
     :loading="loading as any"
-    :class="{ background: isBackground }"
+    
   />
 </template>
 
