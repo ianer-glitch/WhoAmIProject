@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { LanguageEnum } from '@/enums/LanguageEnum'
 import { useTranslateStorage } from '@/stores/translate'
-import { ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 const store = useTranslateStorage()
 
@@ -15,10 +15,23 @@ watch(
   }
 )
 
+
 const setSelectedLanguageOnHtml = (languageAbreviation: string): void => {
   const html = document.querySelector('html')
   html?.setAttribute('language', languageAbreviation)
 }
+
+onMounted(()=>{
+  const browserLanguage = navigator.language
+  const arrayLanguages = Object.values(LanguageEnum) as Array<string>    
+    console.info(navigator.language)
+    if (arrayLanguages.includes(browserLanguage)) {
+      store.language = navigator.language as any
+      setSelectedLanguageOnHtml(store.language)
+      selectedLanguage.value = store.language
+    }
+})
+
 </script>
 
 <template>
