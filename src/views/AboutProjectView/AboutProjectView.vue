@@ -46,10 +46,10 @@ const imgBackgroundUrl= computed(()=>`url(${getImageFilePath(projectToShow.value
   <section class="about-project-container">
     <ButtonBack @click="router.back()" />
     <figure class="image-title-container">
-      <img
+      <div
         class="project-banner"
-        alt="logo"
-      >
+        
+      ></div>
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
     <p
