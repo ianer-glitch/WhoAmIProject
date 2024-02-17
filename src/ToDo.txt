@@ -11,7 +11,7 @@
 
 [X] criação da página de detalhes
 [X] seções no about project
-[ ] adição das imagems dos projetos
-[ ] adião da fonte ao projeto
-[ ] crirar ícone/logo IRM.
-[ ] corrigir gramática geral
+[X] adição das imagems dos projetos
+[X] adião da fonte ao projeto
+[X] crirar ícone/logo IRM.
+[X] corrigir gramática geral

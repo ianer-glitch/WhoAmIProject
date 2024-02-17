@@ -3,12 +3,26 @@ import router from '@/router'
 import Image from './Image.vue'
 import { themeWatch } from '@/shared/themeCommon'
 import { ThemeEnum } from '@/enums/ThemeEnum'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { useThemeStore } from '@/stores/themeStore'
 
 let imgName = ref('irm-logo-white.svg')
+
+const setLogo = (currenctTheme : ThemeEnum) => {
+  imgName.value = currenctTheme === ThemeEnum.Dark ? 'irm-logo-white.svg' : 'irm-logo.svg'
+}
+
+
 themeWatch((newTheme: ThemeEnum) => {
-  imgName.value = newTheme === ThemeEnum.Dark ? 'irm-logo-white.svg' : 'irm-logo.svg'
+  setLogo(newTheme)
 })
+
+
+onMounted(()=>{
+  const store = useThemeStore()
+  setLogo(store.currenctTheme)
+})
+
 </script>
 
 <template>

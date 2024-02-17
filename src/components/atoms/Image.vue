@@ -48,7 +48,7 @@ const bgPath = computed(() => `url(${getImageFilePath(props.imgName)})`)
 
 <template>
   <img
-    :src="!props.isBackground ? src : ''"
+    :src="src"
     :alt="alt"
     :width="width"
     :height="height"
