@@ -26,7 +26,7 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
         description: [
           'Este portfólio foi criado para demonstrar minhas habilidades!',
           'Ele é um compilado de todas as experiências que adquiri ao longo dos anos. Construído utilizando desing atômico,o site  é um belo exemplo de aplicação de componentização  no Frontend.',
-          'A aplicação conta com tema claro e tema  escuro , linguagem Português e Inglês. Além de considerar a preeferência  do usuário para selecionar previamente acada uma dessas opções.',
+          'A aplicação conta com tema claro e tema  escuro , linguagem Português e Inglês. Além de considerar a preferência  do usuário para selecionar previamente acada uma dessas opções.',
           'O Objetivo aqui é tornar meus melhores projetos visíveis a todos!.'
         ],
         name: 'Meu Portfólio'
