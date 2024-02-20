@@ -4,9 +4,9 @@ import { LanguageEnum } from '@/enums/LanguageEnum'
 const projectListForShowcase: Array<ProjectShowcaseItem> = [
   {
     id: '0',
-    publishedLink: 'https://ianrepkermalavazi.com.br',
+    publishedLink: 'http://ianrepkermalavazi.com.br',
     repositoryLink: 'https://github.com/ianer-glitch/WhoAmIProject',
-    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS', 'Tailwind', 'PrimeVue'],
+    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS', 'Tailwind', 'PrimeVue','Docker'],
     imageName: 'portfolio-logo.png',
     readeableInformation: [
       {
