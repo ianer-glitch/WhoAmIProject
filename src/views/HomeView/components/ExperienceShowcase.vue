@@ -27,9 +27,9 @@ const internalExperienceList: Array<ExperienceItemProps> = [
   new ExperienceItemProps('C#', `1,8 ${yearsString}`, 'Logo_C_sharp.svg'),
   new ExperienceItemProps('.Net', `1,8 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('LinQ', `1,8 ${yearsString}`, 'Net.png'),
-  new ExperienceItemProps('SQL', `1,8 ${yearsString}`, 'sql-server.svg'),
   new ExperienceItemProps('Entity Framework', `1,8 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('Dapper ORM', `1,8 ${yearsString}`, 'dapper.png'),
+  new ExperienceItemProps('SQL', `1,8 ${yearsString}`, 'sql-server.svg'),
   new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg')
 ]
 
