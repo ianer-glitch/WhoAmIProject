@@ -12,3 +12,5 @@
 - The app uses Atomic design as a pattern for components.
 - Advanced CSS techniques using  a mix of animations, Vue transitions and intersection observer.
 - Deployed on a docker container.
+
+[Project link](http://ianrepkermalavazi.com.br)
