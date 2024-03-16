@@ -30,8 +30,38 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
           'O Objetivo aqui é tornar meus melhores projetos visíveis a todos!.'
         ],
         name: 'Meu Portfólio'
-      }
+      },
     ]
+  },
+  {
+    id:'1',
+    repositoryLink: 'https://github.com/ianer-glitch/docker-vue-template',
+    tecnlogies: ['Vuejs', 'Docker'],
+    imageName:'docker-vue-template-logo.png',
+    readeableInformation:[
+      {
+        languageName: LanguageEnum.english,
+        bannerName: '',
+        description: [
+          'This project was created to store in a simple way the dockerfiles to dockerizing a vuejs app!',
+          'Sometimes we need a solid environment for development and production.',
+          'To active this, checkout the repository and Wiki!',
+        ],
+        name: 'Docker Vue Template'
+      },
+      {
+        languageName: LanguageEnum.brazilianPortuguese,
+        bannerName: '',
+        description: [
+          'Este projeto foi criado para exemplificar a dockerização de aplicações Vuejs!',
+          'A melhor forma de alcançar ambientes de desenvolvimento e produção confiáveis é utlizando containers.',
+          'Para saber mais acesse o repositório e a Wiki!'
+        ],
+        name: 'Docker Vue Template'
+      },
+    ]
+
+
   }
 ]
 
