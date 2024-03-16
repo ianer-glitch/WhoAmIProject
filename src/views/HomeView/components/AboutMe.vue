@@ -28,7 +28,7 @@ let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
   /* background-color: tomato; */
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .about-me-section {
     flex-direction: row;
     justify-content: space-between;
