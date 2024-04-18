@@ -44,7 +44,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>): 
   })
 }
 
-const containerHeigt = computed(() => `calc(4.9rem* ${props.internalExperienceList.length})`)
+const containerHeigt = computed(() => `calc(90px* ${props.internalExperienceList.length})`)
 
 const emit = defineEmits(['reloadList'])
 
@@ -59,7 +59,7 @@ languageWatch(() => {
     ref="experienceListRef"
     class="experience-container"
   >
-    <h3 class="pb-8 pt-4 font-bold italic">{{ props.title }}</h3>
+    <h3 class="pb-8 pt-4 font-bold italic w-1/2">{{ props.title }}</h3>
     <ul class="list-container">
       <TransitionGroup name="exp-list">
         <li
@@ -89,7 +89,18 @@ languageWatch(() => {
   justify-content: flex-start;
   flex-direction: column;
   border-radius: 12px;
-  min-height: 250px;
+  /* min-height: 400px; */
+  
+}
+
+.experience-container h3::after{
+  display: block;
+  height: 2px;
+  content: "";
+  width: 100%;
+  margin-top: .4rem;
+  background-color: var(--detail-color-2);
+
 }
 
 .list-container {

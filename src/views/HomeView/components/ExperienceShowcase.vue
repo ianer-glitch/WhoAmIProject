@@ -34,7 +34,9 @@ const expListServerSide: Array<ExperienceItemProps> = [
 
 const expListCiCd: Array<ExperienceItemProps> = [
   new ExperienceItemProps('GitHub', `3 ${yearsString}`, 'sql-server.svg'),
-  new ExperienceItemProps('Azure DevOps', `6 ${months}`, 'Tux.svg')
+  new ExperienceItemProps('GitLab', `2 ${yearsString}`, 'sql-server.svg'),
+  new ExperienceItemProps('Azure DevOps', `6 ${months}`, 'Tux.svg'),
+  new ExperienceItemProps('Azure', `6 ${months}`, 'Tux.svg')
 ]
 </script>
 
@@ -46,19 +48,19 @@ const expListCiCd: Array<ExperienceItemProps> = [
       <li>
         <ExperienceList
           :internal-experience-list="expListClientSide"
-          title="Client-Side"
+          title="Client Side"
         />
       </li>
       <li>
         <ExperienceList
           :internal-experience-list="expListServerSide"
-          title="Server-Side"
+          title="Server Side"
         />
       </li>
       <li>
         <ExperienceList
           :internal-experience-list="expListCiCd"
-          title="Ci & Cd"
+          title="Cloud & CI/CD"
         />
       </li>
     </ul>
@@ -76,12 +78,9 @@ const expListCiCd: Array<ExperienceItemProps> = [
   gap: 4rem;
 }
 
-/* .experience-list-container:nth-child(n + 1){
-  background-color: tomato ;
-  width: 400px;
-} */
 
-@media (min-width: 800px) {
+
+@media (min-width: 1024px) {
   .experience-list-container {
    justify-content: space-between;
    gap: 0rem;

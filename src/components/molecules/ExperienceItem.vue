@@ -66,7 +66,7 @@ const props = defineProps<IExperienceItemProps>()
 }
 .text {
   padding: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: bold;
 }
 .item .text {
