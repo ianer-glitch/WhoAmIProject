@@ -15,15 +15,18 @@ let listVisible = ref(false)
 const yearsString = text.value.experienceShowcase.years
 const months = text.value.experienceShowcase.months
 const internalExperienceList: Array<ExperienceItemProps> = [
+  //ClientSide
   new ExperienceItemProps('HTML', `2 ${yearsString}`, 'HTML5_Logo.svg'),
   new ExperienceItemProps('CSS', `2 ${yearsString}`, 'CSS3_logo_and_wordmark.svg'),
   new ExperienceItemProps('VueJs', `2 ${yearsString}`, 'vue-js-icon.svg'),
   new ExperienceItemProps('PrimeVue', `2 ${yearsString}`, 'primevue-logo.svg'),
   new ExperienceItemProps('JavasScript', `2 ${yearsString}`, 'js-logo.svg'),
   new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg'),
-  new ExperienceItemProps('Tailwind', `1 ${months}`, 'Tailwind-logo.svg'),
-  new ExperienceItemProps('Docker', `1 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
-  new ExperienceItemProps('Google Protobuf', `1 ${months}`, 'protobuff.png.pro'),
+  new ExperienceItemProps('Tailwind', `8 ${months}`, 'Tailwind-logo.svg'),
+  
+  //ServerSide
+  new ExperienceItemProps('Docker', `8 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
+  new ExperienceItemProps('Google Protobuf', `8 ${months}`, 'protobuff.png.pro'),
   new ExperienceItemProps('C#', `2 ${yearsString}`, 'Logo_C_sharp.svg'),
   new ExperienceItemProps('.Net', `2 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('LinQ', `2 ${yearsString}`, 'Net.png'),
@@ -31,6 +34,10 @@ const internalExperienceList: Array<ExperienceItemProps> = [
   new ExperienceItemProps('Dapper ORM', `2 ${yearsString}`, 'dapper.png'),
   new ExperienceItemProps('SQL', `2 ${yearsString}`, 'sql-server.svg'),
   new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg')
+
+  //CI&Cd
+  //github
+  //azureDevops
 ]
 
 onMounted(() => {
