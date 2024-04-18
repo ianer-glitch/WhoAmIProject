@@ -1,0 +1,112 @@
+<script setup lang="ts">
+import ExperienceItemProps from '@/classes/ExperienceItemProps'
+import ExperienceItem from '@/components/molecules/ExperienceItem.vue'
+import { languageWatch } from '@/shared/languageCommon'
+
+import { computed, onMounted, reactive, ref } from 'vue'
+
+let experienceList: Array<ExperienceItemProps> = reactive([])
+
+const experienceListRef = ref(null)
+let listVisible = ref(false)
+
+const props = defineProps({
+  internalExperienceList: {
+    type: Array<ExperienceItemProps>,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  }
+})
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !listVisible.value) {
+          listVisible.value = true
+          inicializeExperienceList(props.internalExperienceList)
+        }
+      })
+    },
+    { rootMargin: '10px' }
+  )
+  observer.observe(experienceListRef.value as any)
+})
+
+const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>): void => {
+  listToGetValues.forEach((item, index) => {
+    setTimeout(() => {
+      experienceList.push(item)
+    }, 200 * index)
+  })
+}
+
+const containerHeigt = computed(() => `calc(4.9rem* ${props.internalExperienceList.length})`)
+
+const emit = defineEmits(['reloadList'])
+
+let experienceListKey = ref(0)
+languageWatch(() => {
+  emit('reloadList')
+})
+</script>
+
+<template>
+  <section
+    ref="experienceListRef"
+    class="experience-container"
+  >
+    <h3 class="pb-8 pt-4 font-bold italic">{{ props.title }}</h3>
+    <ul class="list-container">
+      <TransitionGroup name="exp-list">
+        <li
+          class="w-full flex items-center justify-center"
+          v-for="(exp, index) in experienceList"
+          :key="index + experienceListKey"
+        >
+          <ExperienceItem
+            :title="exp.title"
+            :subtitle="exp.subtitle"
+            :img-name="exp.imgName"
+          />
+        </li>
+      </TransitionGroup>
+    </ul>
+  </section>
+</template>
+
+<style scoped>
+.experience-container {
+  width: 400px;
+  text-align: center;
+  height: v-bind('containerHeigt');
+  box-shadow: 1px 1px 50px 1px var(--bg-color-1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 12px;
+  min-height: 250px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 0.6rem;
+}
+
+.exp-list-enter-active,
+.exp-list-leave-active {
+  transition: all 0.5s ease;
+}
+.exp-list-enter-from,
+.exp-list-leave-to {
+  opacity: 0;
+}
+</style>

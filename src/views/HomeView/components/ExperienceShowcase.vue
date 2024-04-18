@@ -1,30 +1,26 @@
 <script setup lang="ts">
 import ExperienceItemProps from '@/classes/ExperienceItemProps'
-import ExperienceItem from '@/components/molecules/ExperienceItem.vue'
-import { getPageTextsInCurrenctLanguageReactive, languageWatch } from '@/shared/languageCommon'
+import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed } from 'vue'
+import ExperienceList from './ExperienceList.vue'
 
 let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 
-let experienceList: Array<ExperienceItemProps> = reactive([])
-
-const experienceListRef = ref(null)
-let listVisible = ref(false)
-
 const yearsString = text.value.experienceShowcase.years
 const months = text.value.experienceShowcase.months
-const internalExperienceList: Array<ExperienceItemProps> = [
-  //ClientSide
+
+const expListClientSide: Array<ExperienceItemProps> = [
   new ExperienceItemProps('HTML', `2 ${yearsString}`, 'HTML5_Logo.svg'),
   new ExperienceItemProps('CSS', `2 ${yearsString}`, 'CSS3_logo_and_wordmark.svg'),
   new ExperienceItemProps('VueJs', `2 ${yearsString}`, 'vue-js-icon.svg'),
   new ExperienceItemProps('PrimeVue', `2 ${yearsString}`, 'primevue-logo.svg'),
   new ExperienceItemProps('JavasScript', `2 ${yearsString}`, 'js-logo.svg'),
   new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg'),
-  new ExperienceItemProps('Tailwind', `8 ${months}`, 'Tailwind-logo.svg'),
-  
-  //ServerSide
+  new ExperienceItemProps('Tailwind', `8 ${months}`, 'Tailwind-logo.svg')
+]
+
+const expListServerSide: Array<ExperienceItemProps> = [
   new ExperienceItemProps('Docker', `8 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
   new ExperienceItemProps('Google Protobuf', `8 ${months}`, 'protobuff.png.pro'),
   new ExperienceItemProps('C#', `2 ${yearsString}`, 'Logo_C_sharp.svg'),
@@ -34,91 +30,61 @@ const internalExperienceList: Array<ExperienceItemProps> = [
   new ExperienceItemProps('Dapper ORM', `2 ${yearsString}`, 'dapper.png'),
   new ExperienceItemProps('SQL', `2 ${yearsString}`, 'sql-server.svg'),
   new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg')
-
-  //CI&Cd
-  //github
-  //azureDevops
 ]
 
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !listVisible.value) {
-          listVisible.value = true
-          inicializeExperienceList(internalExperienceList)
-        }
-      })
-    },
-    { rootMargin: '10px' }
-  )
-  observer.observe(experienceListRef.value as any)
-})
-
-const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>): void => {
-  listToGetValues.forEach((item, index) => {
-    setTimeout(() => {
-      experienceList.push(item)
-    }, 200 * index)
-  })
-}
-
-const containerHeigt = computed(() => `calc(4.6rem* ${internalExperienceList.length})`)
-
-const emit = defineEmits(['reloadList'])
-
-let experienceListKey = ref(0)
-languageWatch(() => {
-  emit('reloadList')
-})
+const expListCiCd: Array<ExperienceItemProps> = [
+  new ExperienceItemProps('GitHub', `3 ${yearsString}`, 'sql-server.svg'),
+  new ExperienceItemProps('Azure DevOps', `6 ${months}`, 'Tux.svg')
+]
 </script>
 
 <template>
-  <section
-    ref="experienceListRef"
-    class="experience-container"
-  >
+  <div class="flex items-center justify-center w-full flex-col">
     <h2 class="pb-8 font-bold">{{ text.experienceShowcase.title }}</h2>
-    <ul class="list-container">
-      <TransitionGroup name="exp-list">
-        <li
-          class="w-full flex items-center justify-center"
-          v-for="(exp, index) in experienceList"
-          :key="index + experienceListKey"
-        >
-          <ExperienceItem
-            :title="exp.title"
-            :subtitle="exp.subtitle"
-            :img-name="exp.imgName"
-          />
-        </li>
-      </TransitionGroup>
+
+    <ul class="experience-list-container">
+      <li>
+        <ExperienceList
+          :internal-experience-list="expListClientSide"
+          title="Client-Side"
+        />
+      </li>
+      <li>
+        <ExperienceList
+          :internal-experience-list="expListServerSide"
+          title="Server-Side"
+        />
+      </li>
+      <li>
+        <ExperienceList
+          :internal-experience-list="expListCiCd"
+          title="Ci & Cd"
+        />
+      </li>
     </ul>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-.experience-container {
-  width: 80%;
-  text-align: center;
-  height: v-bind('containerHeigt');
-}
-
-.list-container {
+.experience-list-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 80%;
+  height: fit-content;
+  flex-flow: row wrap;
+  align-items: flex-start;
   justify-content: center;
-  width: 100%;
-  gap: 0.6rem;
+  gap: 4rem;
 }
 
-.exp-list-enter-active,
-.exp-list-leave-active {
-  transition: all 0.5s ease;
-}
-.exp-list-enter-from,
-.exp-list-leave-to {
-  opacity: 0;
+/* .experience-list-container:nth-child(n + 1){
+  background-color: tomato ;
+  width: 400px;
+} */
+
+@media (min-width: 800px) {
+  .experience-list-container {
+   justify-content: space-between;
+   gap: 0rem;
+  }
 }
 </style>
