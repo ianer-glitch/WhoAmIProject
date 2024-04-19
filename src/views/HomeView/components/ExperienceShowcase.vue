@@ -2,8 +2,11 @@
 import ExperienceItemProps from '@/classes/ExperienceItemProps'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 
+
 import { computed } from 'vue'
 import ExperienceList from './ExperienceList.vue'
+
+const emit = defineEmits(['reloadList'])
 
 let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 
@@ -49,18 +52,22 @@ const expListCiCd: Array<ExperienceItemProps> = [
         <ExperienceList
           :internal-experience-list="expListClientSide"
           title="Client Side"
+          @reload-list="emit('reloadList')"
+          
         />
       </li>
       <li>
         <ExperienceList
           :internal-experience-list="expListServerSide"
           title="Server Side"
+          @reload-list="emit('reloadList')"
         />
       </li>
       <li>
         <ExperienceList
           :internal-experience-list="expListCiCd"
           title="Cloud & CI / CD"
+          @reload-list="emit('reloadList')"
         />
       </li>
     </ul>
