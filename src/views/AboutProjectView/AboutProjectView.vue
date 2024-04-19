@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
 import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
-import Image from '@/components/atoms/Image.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
 import router from '@/router'
 import { getImageFilePath } from '@/shared/files'

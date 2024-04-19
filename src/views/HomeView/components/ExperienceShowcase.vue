@@ -2,7 +2,6 @@
 import ExperienceItemProps from '@/classes/ExperienceItemProps'
 import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 
-
 import { computed } from 'vue'
 import ExperienceList from './ExperienceList.vue'
 
@@ -20,7 +19,7 @@ const expListClientSide: Array<ExperienceItemProps> = [
   new ExperienceItemProps('PrimeVue', `2 ${yearsString}`, 'primevue-logo.svg'),
   new ExperienceItemProps('JavasScript', `2 ${yearsString}`, 'js-logo.svg'),
   new ExperienceItemProps('Tailwind', `8 ${months}`, 'Tailwind-logo.svg'),
-  new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg'),
+  new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg')
 ]
 
 const expListServerSide: Array<ExperienceItemProps> = [
@@ -32,7 +31,7 @@ const expListServerSide: Array<ExperienceItemProps> = [
   new ExperienceItemProps('Dapper ORM', `2 ${yearsString}`, 'dapper.png'),
   new ExperienceItemProps('SQL', `2 ${yearsString}`, 'sql-server.svg'),
   new ExperienceItemProps('Docker', `8 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
-  new ExperienceItemProps('Google Protobuf', `8 ${months}`, 'protobuff.png.pro'),
+  new ExperienceItemProps('Google Protobuf', `8 ${months}`, 'protobuff.png.pro')
 ]
 
 const expListCiCd: Array<ExperienceItemProps> = [
@@ -53,7 +52,6 @@ const expListCiCd: Array<ExperienceItemProps> = [
           :internal-experience-list="expListClientSide"
           title="Client Side"
           @reload-list="emit('reloadList')"
-          
         />
       </li>
       <li>
@@ -85,12 +83,10 @@ const expListCiCd: Array<ExperienceItemProps> = [
   gap: 4rem;
 }
 
-
-
 @media (min-width: 1024px) {
   .experience-list-container {
-   justify-content: space-between;
-   gap: 0rem;
+    justify-content: space-between;
+    gap: 0rem;
   }
 }
 </style>

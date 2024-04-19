@@ -90,17 +90,15 @@ languageWatch(() => {
   flex-direction: column;
   border-radius: 12px;
   /* min-height: 400px; */
-  
 }
 
-.experience-container h3::after{
+.experience-container h3::after {
   display: block;
   height: 2px;
-  content: "";
+  content: '';
   width: 100%;
-  margin-top: .4rem;
+  margin-top: 0.4rem;
   background-color: var(--detail-color-2);
-
 }
 
 .list-container {

@@ -6,7 +6,6 @@ import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
 import { computed, onMounted, reactive, ref } from 'vue'
 import projectListForShowcase from '@/shared/projectListForShowcase'
 import Image from '@/components/atoms/Image.vue'
-import { getFilePath } from '@/shared/files'
 
 const listVisible = ref(false)
 const projectList = projectListForShowcase
@@ -18,15 +17,6 @@ const mountProjectsArray = () => {
       projectsToShow.push(f)
     }, index * 100)
   })
-
-  // for (let i = 0; i <= 5; i++) {
-  //   setTimeout(() => {
-  //     const projectItem = new ProjectShowcaseItem()
-  //     // projectItem.readeableInformation.imageName = 'https://picsum.photos/200/200'
-  //     // projectItem.readeableInformation.name = 'Lorem Picsum'
-  //     projectsToShow.push(projectItem)
-  //   }, i * 100)
-  // }
 }
 const projecListRef = ref(null)
 
@@ -50,10 +40,6 @@ let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 const redirectToAbout = (projectItem: ProjectShowcaseItem) => {
   LocalStorageAboutViewController.setProjectAboutView(projectItem)
   router.push('/about')
-}
-
-const getImagePath = (fileName: string) => {
-  return `url(${getFilePath(fileName)})`
 }
 </script>
 
@@ -122,7 +108,7 @@ img {
   border-radius: 4px;
 }
 
-img:hover{
+img:hover {
   cursor: pointer;
 }
 
