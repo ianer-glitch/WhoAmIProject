@@ -53,7 +53,7 @@ const bgPath = computed(() => `url(${getImageFilePath(props.imgName)})`)
     :width="width"
     :height="height"
     :loading="loading as any"
-  />
+  >
 </template>
 
 <style scoped>

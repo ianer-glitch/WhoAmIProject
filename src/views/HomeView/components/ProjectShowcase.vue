@@ -122,6 +122,10 @@ img {
   border-radius: 4px;
 }
 
+img:hover{
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
   .img-containter {
     width: 80%;

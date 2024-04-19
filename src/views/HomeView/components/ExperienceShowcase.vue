@@ -16,27 +16,27 @@ const expListClientSide: Array<ExperienceItemProps> = [
   new ExperienceItemProps('VueJs', `2 ${yearsString}`, 'vue-js-icon.svg'),
   new ExperienceItemProps('PrimeVue', `2 ${yearsString}`, 'primevue-logo.svg'),
   new ExperienceItemProps('JavasScript', `2 ${yearsString}`, 'js-logo.svg'),
+  new ExperienceItemProps('Tailwind', `8 ${months}`, 'Tailwind-logo.svg'),
   new ExperienceItemProps('Typescript', `6 ${months}`, 'Typescript_logo_2020.svg'),
-  new ExperienceItemProps('Tailwind', `8 ${months}`, 'Tailwind-logo.svg')
 ]
 
 const expListServerSide: Array<ExperienceItemProps> = [
-  new ExperienceItemProps('Docker', `8 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
-  new ExperienceItemProps('Google Protobuf', `8 ${months}`, 'protobuff.png.pro'),
+  new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg'),
   new ExperienceItemProps('C#', `2 ${yearsString}`, 'Logo_C_sharp.svg'),
   new ExperienceItemProps('.Net', `2 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('LinQ', `2 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('Entity Framework', `2 ${yearsString}`, 'Net.png'),
   new ExperienceItemProps('Dapper ORM', `2 ${yearsString}`, 'dapper.png'),
   new ExperienceItemProps('SQL', `2 ${yearsString}`, 'sql-server.svg'),
-  new ExperienceItemProps('Linux', `4 ${yearsString}`, 'Tux.svg')
+  new ExperienceItemProps('Docker', `8 ${months}`, '01-symbol_primary-blue-docker-logo.svg'),
+  new ExperienceItemProps('Google Protobuf', `8 ${months}`, 'protobuff.png.pro'),
 ]
 
 const expListCiCd: Array<ExperienceItemProps> = [
-  new ExperienceItemProps('GitHub', `3 ${yearsString}`, 'sql-server.svg'),
-  new ExperienceItemProps('GitLab', `2 ${yearsString}`, 'sql-server.svg'),
-  new ExperienceItemProps('Azure DevOps', `6 ${months}`, 'Tux.svg'),
-  new ExperienceItemProps('Azure', `6 ${months}`, 'Tux.svg')
+  new ExperienceItemProps('GitHub', `3 ${yearsString}`, 'github.svg'),
+  new ExperienceItemProps('GitLab', `2 ${yearsString}`, 'gitlab-logo-500.svg'),
+  new ExperienceItemProps('Microsoft Azure DevOps', `6 ${months}`, 'azure-devops-svgrepo-com.svg'),
+  new ExperienceItemProps('Microsoft Azure', `6 ${months}`, 'Microsoft_Azure.svg')
 ]
 </script>
 
