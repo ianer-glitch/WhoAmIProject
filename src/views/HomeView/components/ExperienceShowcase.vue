@@ -60,7 +60,7 @@ const expListCiCd: Array<ExperienceItemProps> = [
       <li>
         <ExperienceList
           :internal-experience-list="expListCiCd"
-          title="Cloud & CI/CD"
+          title="Cloud & CI / CD"
         />
       </li>
     </ul>
