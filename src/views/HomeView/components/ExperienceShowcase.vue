@@ -11,6 +11,7 @@ let text = computed(() => getPageTextsInCurrenctLanguageReactive())
 
 const yearsString = text.value.experienceShowcase.years
 const months = text.value.experienceShowcase.months
+const learning = text.value.experienceShowcase.learning
 
 const expListClientSide: Array<ExperienceItemProps> = [
   new ExperienceItemProps('HTML', `2 ${yearsString}`, 'HTML5_Logo.svg'),
@@ -40,6 +41,14 @@ const expListCiCd: Array<ExperienceItemProps> = [
   new ExperienceItemProps('Microsoft Azure DevOps', `6 ${months}`, 'azure-devops-svgrepo-com.svg'),
   new ExperienceItemProps('Microsoft Azure', `6 ${months}`, 'Microsoft_Azure.svg')
 ]
+
+const expListLearning : Array<ExperienceItemProps> =[
+  new ExperienceItemProps('Python', "", 'python.svg'),
+  new ExperienceItemProps('Vitest', "", 'vitest.svg'),
+  new ExperienceItemProps('xUnity', "", 'Net.png'),
+]
+
+
 </script>
 
 <template>
@@ -52,6 +61,7 @@ const expListCiCd: Array<ExperienceItemProps> = [
           :internal-experience-list="expListClientSide"
           title="Client Side"
           @reload-list="emit('reloadList')"
+          height="600px"
         />
       </li>
       <li>
@@ -59,14 +69,24 @@ const expListCiCd: Array<ExperienceItemProps> = [
           :internal-experience-list="expListServerSide"
           title="Server Side"
           @reload-list="emit('reloadList')"
-        />
+          height="700px"
+          />
       </li>
       <li>
         <ExperienceList
           :internal-experience-list="expListCiCd"
           title="Cloud & CI / CD"
           @reload-list="emit('reloadList')"
-        />
+          height="400px"
+          />
+      </li>
+      <li>
+        <ExperienceList
+          :internal-experience-list="expListLearning"
+          :title="learning"
+          @reload-list="emit('reloadList')"
+          height="300px"
+          />
       </li>
     </ul>
   </div>

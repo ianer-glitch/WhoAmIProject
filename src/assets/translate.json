@@ -13,7 +13,8 @@
         "month": "Mês",
         "months": "Meses",
         "year": "Ano",
-        "years": "Anos"
+        "years": "Anos",
+        "learning":"Em Estudo"
       },
       "contactMe": {
         "title": "Entre em Contato"
@@ -40,7 +41,8 @@
         "month": "Month",
         "months": "Months",
         "year": "Year",
-        "years": "Years"
+        "years": "Years",
+        "learning":"Learning"
       },
       "contactMe": {
         "title": "Contact Me"

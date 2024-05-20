@@ -18,6 +18,10 @@ const props = defineProps({
   title: {
     type: String,
     required: true
+  },
+  height:{
+    type:String,
+    required:true,
   }
 })
 
@@ -44,7 +48,7 @@ const inicializeExperienceList = (listToGetValues: Array<ExperienceItemProps>): 
   })
 }
 
-const containerHeigt = computed(() => `calc(90px* ${props.internalExperienceList.length})`)
+// const containerHeigt = computed(() => `calc(90px* ${props.internalExperienceList.length})`)
 
 const emit = defineEmits(['reloadList'])
 
@@ -59,7 +63,7 @@ languageWatch(() => {
     ref="experienceListRef"
     class="experience-container"
   >
-    <h3 class="pb-8 pt-4 font-bold italic w-1/2">{{ props.title }}</h3>
+    <h3 class="pb-8 pt-4 pt-4containerHeigt font-bold italic w-1/2">{{ props.title }}</h3>
     <ul class="list-container">
       <TransitionGroup name="exp-list">
         <li
@@ -82,7 +86,7 @@ languageWatch(() => {
 .experience-container {
   width: 400px;
   text-align: center;
-  height: v-bind('containerHeigt');
+  height: v-bind('height');
   box-shadow: 1px 1px 50px 1px var(--bg-color-1);
   display: flex;
   align-items: center;
