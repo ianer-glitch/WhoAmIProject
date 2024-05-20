@@ -100,7 +100,7 @@ const expListLearning : Array<ExperienceItemProps> =[
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: center;
-  gap: 4rem;
+  gap: 2.8rem;
 }
 
 @media (min-width: 1024px) {
