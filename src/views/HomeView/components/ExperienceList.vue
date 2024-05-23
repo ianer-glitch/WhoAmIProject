@@ -93,6 +93,7 @@ languageWatch(() => {
   justify-content: flex-start;
   flex-direction: column;
   border-radius: 12px;
+  padding-bottom: 1rem;
   /* min-height: 400px; */
 }
 

@@ -61,7 +61,7 @@ const expListLearning : Array<ExperienceItemProps> =[
           :internal-experience-list="expListClientSide"
           title="Client Side"
           @reload-list="emit('reloadList')"
-          height="600px"
+          height="100%"
         />
       </li>
       <li>
@@ -69,7 +69,7 @@ const expListLearning : Array<ExperienceItemProps> =[
           :internal-experience-list="expListServerSide"
           title="Server Side"
           @reload-list="emit('reloadList')"
-          height="700px"
+          height="100%"
           />
       </li>
       <li>
@@ -77,7 +77,7 @@ const expListLearning : Array<ExperienceItemProps> =[
           :internal-experience-list="expListCiCd"
           title="Cloud & CI / CD"
           @reload-list="emit('reloadList')"
-          height="400px"
+          height="100%"
           />
       </li>
       <li>
@@ -85,7 +85,7 @@ const expListLearning : Array<ExperienceItemProps> =[
           :internal-experience-list="expListLearning"
           :title="learning"
           @reload-list="emit('reloadList')"
-          height="300px"
+          height="100%"
           />
       </li>
     </ul>
@@ -96,17 +96,20 @@ const expListLearning : Array<ExperienceItemProps> =[
 .experience-list-container {
   display: flex;
   width: 80%;
-  height: fit-content;
+  height: 100%;
   flex-flow: row wrap;
-  align-items: flex-start;
+  
   justify-content: center;
   gap: 2.8rem;
+  
 }
+
+
 
 @media (min-width: 1024px) {
   .experience-list-container {
     justify-content: space-between;
-    gap: 0rem;
+    
   }
 }
 </style>
