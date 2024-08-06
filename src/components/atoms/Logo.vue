@@ -48,6 +48,11 @@ figure {
   align-items: center;
   justify-content: flex-start;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+figure:is(:hover, :active) {
+  scale: 1.2;
 }
 
 @media (min-width: 600px) {
