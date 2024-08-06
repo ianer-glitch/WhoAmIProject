@@ -1,11 +1,11 @@
-import type ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
-import { LanguageEnum } from '@/enums/LanguageEnum'
+import type ProjectShowcaseItem from "@/classes/ProjectShowcaseItem"
+import { LanguageEnum } from "@/enums/LanguageEnum"
 
 const projectListForShowcase: Array<ProjectShowcaseItem> = [
   {
-    id: '0',
-    tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS', 'Tailwind', 'PrimeVue', 'Docker'],
-    imageName: 'portfolio-logo.png',
+    id: "0",
+    tecnlogies: ["Vuejs", "Typescript", "HTML", "CSS", "Tailwind", "PrimeVue", "Docker"],
+    imageName: "portfolio-logo.png",
     links:[
       {
         languageName : LanguageEnum.english,
@@ -19,6 +19,11 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
             label : "Go to Project",
             link : "http://ianrepkermalavazi.com.br",
             primeIconName : "pi pi-globe"
+          },
+          {
+            label : "Go to Desing Project",
+            link : "https://www.figma.com/design/T3sqE6aymVGQc79ZYFQMT3/WhoAmIProject?node-id=0-1&t=0Ozm2RgS8Q7k0P91-1",
+            primeIconName : "pi pi-palette"
           },
         ]
       },
@@ -35,38 +40,43 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
             link : "http://ianrepkermalavazi.com.br",
             primeIconName : "pi pi-globe"
           },
+          {
+            label : "Acessar o Desing",
+            link : "https://www.figma.com/design/T3sqE6aymVGQc79ZYFQMT3/WhoAmIProject?node-id=0-1&t=0Ozm2RgS8Q7k0P91-1",
+            primeIconName : "pi pi-palette"
+          },
         ]
       },
     ],
     readeableInformation: [
       {
         languageName: LanguageEnum.english,
-        bannerName: '',
+        bannerName: "",
         description: [
-          '<p>This portfolio was created to show my developer skills !</p>',
+          "<p>This portfolio was created to show my developer skills !</p>",
           "<p>It's is a compilation of all my experiences and a sucessfull Frontend implementation of atomic desing.</p>",
           "<p>A user that acess the app can choose between Portuguese language or English Language, light theme or dark theme and it can automatically choose based on the person's preference.</p>",
-          '<p>My goal here is show my best projects to everyone!</p>'
+          "<p>My goal here is show my best projects to everyone!</p>"
         ],
-        name: 'My Portfolio'
+        name: "My Portfolio"
       },
       {
         languageName: LanguageEnum.brazilianPortuguese,
-        bannerName: '',
+        bannerName: "",
         description: [
-          '<p>Este portfólio foi criado para demonstrar minhas habilidades!</p>',
-          '<p>Ele é um compilado de todas as experiências que adquiri ao longo dos anos. Construído utilizando desing atômico,o site  é um belo exemplo de aplicação de componentização  no Frontend.</p>',
-          '<p>A aplicação conta com tema claro e tema  escuro , linguagem Português e Inglês. Além de considerar a preferência  do usuário para selecionar previamente acada uma dessas opções.</p>',
-          '<p>O Objetivo aqui é tornar meus melhores projetos visíveis a todos!</p>.'
+          "<p>Este portfólio foi criado para demonstrar minhas habilidades!</p>",
+          "<p>Ele é um compilado de todas as experiências que adquiri ao longo dos anos. Construído utilizando desing atômico,o site  é um belo exemplo de aplicação de componentização  no Frontend.</p>",
+          "<p>A aplicação conta com tema claro e tema  escuro , linguagem Português e Inglês. Além de considerar a preferência  do usuário para selecionar previamente acada uma dessas opções.</p>",
+          "<p>O Objetivo aqui é tornar meus melhores projetos visíveis a todos!</p>."
         ],
-        name: 'Meu Portfólio'
+        name: "Meu Portfólio"
       }
     ]
   },
   {
-    id: '1',
-    tecnlogies: ['Vuejs', 'Docker'],
-    imageName: 'docker-vue-template-logo.png',
+    id: "1",
+    tecnlogies: ["Vuejs", "Docker"],
+    imageName: "docker-vue-template-logo.png",
     
     links:[
       {
@@ -96,23 +106,23 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
     readeableInformation: [
       {
         languageName: LanguageEnum.english,
-        bannerName: '',
+        bannerName: "",
         description: [
-          '<p>This project was created to store in a simple way the dockerfiles to dockerizing a vuejs app!</p>',
-          '<p>Sometimes we need a solid environment for development and production.</p>',
-          '<p>To active this, checkout the repository and Wiki !</p>'
+          "<p>This project was created to store in a simple way the dockerfiles to dockerizing a vuejs app!</p>",
+          "<p>Sometimes we need a solid environment for development and production.</p>",
+          "<p>To active this, checkout the repository and Wiki !</p>"
         ],
-        name: 'Docker Vue Template'
+        name: "Docker Vue Template"
       },
       {
         languageName: LanguageEnum.brazilianPortuguese,
-        bannerName: '',
+        bannerName: "",
         description: [
-          '<p>Este projeto foi criado para exemplificar a dockerização de aplicações Vuejs!</p>',
-          '<p>A melhor forma de alcançar ambientes de desenvolvimento e produção confiáveis é utlizando containers.</p>',
-          '<p>Para saber mais acesse o repositório e a Wiki !</p>'
+          "<p>Este projeto foi criado para exemplificar a dockerização de aplicações Vuejs!</p>",
+          "<p>A melhor forma de alcançar ambientes de desenvolvimento e produção confiáveis é utlizando containers.</p>",
+          "<p>Para saber mais acesse o repositório e a Wiki !</p>"
         ],
-        name: 'Docker Vue Template'
+        name: "Docker Vue Template"
       }
     ]
   }

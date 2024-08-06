@@ -69,7 +69,8 @@ const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.va
       <div class="project-banner"></div>
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
-    <div v-html="readebleInfoProject.description.join()"></div>
+    <div v-html="readebleInfoProject.description.join('')"></div>
+    
    <ul class="tecnologies-container">
       <li
         class="tec-item"
