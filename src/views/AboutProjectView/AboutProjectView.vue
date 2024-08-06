@@ -95,30 +95,6 @@ const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.va
         </figure>
       </li>
     </ul>
-    
-    <!-- <ul
-      v-if="projectToShow.repositoryLink || projectToShow.publishedLink"
-      class="redirect-to-project-container"
-    >
-      <li v-if="projectToShow.repositoryLink">
-        <figure
-          @click="redirectToOutside(projectToShow.repositoryLink)"
-          class="redirect-item"
-        >
-          <i class="pi pi-github redirect-icon"></i>
-          <label>{{ texts.aboutProject.githubLabel }}</label>
-        </figure>
-      </li>
-      <li v-if="projectToShow.publishedLink">
-        <figure
-          @click="redirectToOutside(projectToShow.publishedLink)"
-          class="redirect-item"
-        >
-          <i class="pi pi-globe redirect-icon"></i>
-          <label>{{ texts.aboutProject.publishedLabel }}</label>
-        </figure>
-      </li>
-    </ul> -->
   </section>
 </template>
 

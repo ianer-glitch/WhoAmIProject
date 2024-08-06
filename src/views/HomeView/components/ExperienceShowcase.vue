@@ -43,8 +43,9 @@ const expListCiCd: Array<ExperienceItemProps> = [
 ]
 
 const expListLearning : Array<ExperienceItemProps> =[
-  new ExperienceItemProps('Python', "", 'python.svg'),
-  new ExperienceItemProps('Vitest', "", 'vitest.svg'),
+  new ExperienceItemProps('RabbitMQ', "", 'rabbitmq.svg'),
+  new ExperienceItemProps('PostgreSql', "", 'postgresql-icon.svg'),
+  new ExperienceItemProps('MongoDb', "", 'mongodb-svgrepo-com.svg'),
   new ExperienceItemProps('xUnity', "", 'Net.png'),
 ]
 
