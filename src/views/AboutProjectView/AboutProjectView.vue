@@ -69,7 +69,7 @@ const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.va
       <div class="project-banner"></div>
     </figure>
     <h1 class="project-name">{{ readebleInfoProject.name }}</h1>
-    <div v-html="readebleInfoProject.description.join('')"></div>
+    <div class="dynamic-text" v-html="readebleInfoProject.description.join('')"></div>
     
    <ul class="tecnologies-container">
       <li
@@ -123,6 +123,7 @@ const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.va
 </template>
 
 <style scoped>
+
 .redirect-icon {
   transition: all 0.2s ease-in-out;
   font-size: 2rem;

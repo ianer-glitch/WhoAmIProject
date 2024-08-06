@@ -125,7 +125,86 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
         name: "Docker Vue Template"
       }
     ]
+  },
+  {
+    id: "3",
+    tecnlogies: [".Net", "Docker","RabbitMQ","Grpc","PostgreSQL","MongoDB","Microservices"],
+    imageName: "vamosRacharLogo.png",
+    
+    links:[
+      {
+        languageName : LanguageEnum.english,
+        details:[
+          {
+            label : "See Backend Repository",
+            link : "https://github.com/ianer-glitch/VamosRacharService",
+            primeIconName : "pi pi-github"
+          },
+          {
+            label : "Go to Desing Project",
+            link : "https://www.figma.com/design/zA8zSMNVcipWsQ1nnBE5z7/VamosRachar?t=HkjDs6dDMkzoMxmu-1",
+            primeIconName : "pi pi-palette"
+          },
+        ]
+      },
+      {
+        languageName : LanguageEnum.brazilianPortuguese,
+        details:[
+          {
+            label : "Ver Repositório Backend",
+            link : "https://github.com/ianer-glitch/VamosRacharService",
+            primeIconName : "pi pi-github"
+          },
+          {
+            label : "Acessar o Desing",
+            link : "https://www.figma.com/design/zA8zSMNVcipWsQ1nnBE5z7/VamosRachar?t=HkjDs6dDMkzoMxmu-1",
+            primeIconName : "pi pi-palette"
+          },
+        ]
+      },
+      
+
+
+      
+    ],
+    readeableInformation: [
+      {
+        languageName: LanguageEnum.english,
+        bannerName: "",
+        description: [
+          "<p>Vamos Rachar is an app about divide costs between people</p>",
+          "<p>What it can do:</p>",
+          "<ul>",
+          "<br>",
+          "<li>   -  Add an amount to divide with people </li>",
+          "<li>   -  Notify persons included in the bill</li>",
+          "<li>   -  Store all transactions to keep it in a history </li>",
+          "</ul>",
+          "<br>",
+          "<p>This is a working project , so It has a lot to be done.</p>"
+        ],
+        name: "Vamos Rachar"
+      },
+      {
+        languageName: LanguageEnum.brazilianPortuguese,
+        bannerName: "",
+        description: [
+          "<p>Vamos Rachar é uma iniciative de aplicação relacionada a dividir os custos de uma conta</p>",
+          "<p>É possivel na plataforma: </p>",
+          "<ul>",
+          "<br>",
+          "<li>   -  Adicinar uma conta para divisão </li>",
+          "<li>   -  Enviar notificação aos usuários da plataforma que fizeram parte de um mesmo rateio.</li>",
+          "<li>   -  Funcionar como um simples histórico de rateio </li>",
+          "</ul>",
+          "<br>",
+          "<p>Este projeto ainda está em desenvolvimento, portanto ainda existe um longo caminho para sua execução</p>"
+        ],
+        name: "Vamos Rachar"
+      }
+    ]
   }
+  
 ]
 
 export default projectListForShowcase
