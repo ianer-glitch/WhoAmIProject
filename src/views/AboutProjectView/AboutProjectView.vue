@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import ProjectShowcaseItem from '@/classes/ProjectShowcaseItem'
+import ProjectShowcaseItem,{ProjectShowcaseLinkItem} from '@/classes/ProjectShowcaseItem'
 import ButtonBack from '@/components/_specific/button/ButtonBack.vue'
 import LocalStorageAboutViewController from '@/controllers/localStorage/LocalStorageAboutViewController'
+import type { LanguageEnum } from '@/enums/LanguageEnum'
 import router from '@/router'
 import { getImageFilePath } from '@/shared/files'
-import { getPageTextsInCurrenctLanguageReactive } from '@/shared/languageCommon'
+import { getPageTextsInCurrenctLanguageReactive, languageWatch } from '@/shared/languageCommon'
 import { useTranslateStorage } from '@/stores/translate'
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 
 const translateStore = useTranslateStorage()
 
@@ -36,6 +37,28 @@ const redirectToOutside = (link?: string): void => {
 
 let texts = computed(() => getPageTextsInCurrenctLanguageReactive())
 
+let redirectLinks : Array<ProjectShowcaseLinkItem>= reactive([])
+
+languageWatch((currenctLanguage:LanguageEnum)=>{
+  createRedirectList(currenctLanguage)
+})
+
+let linksKey = ref(0)
+
+onMounted(()=>{
+  const store = useTranslateStorage()
+  createRedirectList(store.language)
+  
+})
+
+const createRedirectList = (currenctLanguage:LanguageEnum) =>{
+  redirectLinks = projectToShow.value.links.filter(f=>f.languageName == currenctLanguage).map(m=>m.details).flat()
+  linksKey.value++
+  
+}
+
+
+
 const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.value.imageName)})`)
 </script>
 
@@ -59,7 +82,20 @@ const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.va
       </li>
     </ul>
 
-    <ul
+    
+    <ul class="redirect-to-project-container" :key="linksKey">
+      <li v-for="link,index in redirectLinks" :key="index">
+        <figure
+          @click="redirectToOutside(link.link)"
+          class="redirect-item"
+        >
+          <i class="redirect-icon" :class="link.primeIconName"></i>
+          <label>{{ link.label }}</label>
+        </figure>
+      </li>
+    </ul>
+    
+    <!-- <ul
       v-if="projectToShow.repositoryLink || projectToShow.publishedLink"
       class="redirect-to-project-container"
     >
@@ -81,7 +117,7 @@ const imgBackgroundUrl = computed(() => `url(${getImageFilePath(projectToShow.va
           <label>{{ texts.aboutProject.publishedLabel }}</label>
         </figure>
       </li>
-    </ul>
+    </ul> -->
   </section>
 </template>
 

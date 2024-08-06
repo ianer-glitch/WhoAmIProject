@@ -4,10 +4,40 @@ import { LanguageEnum } from '@/enums/LanguageEnum'
 const projectListForShowcase: Array<ProjectShowcaseItem> = [
   {
     id: '0',
-    publishedLink: 'http://ianrepkermalavazi.com.br',
-    repositoryLink: 'https://github.com/ianer-glitch/WhoAmIProject',
     tecnlogies: ['Vuejs', 'Typescript', 'HTML', 'CSS', 'Tailwind', 'PrimeVue', 'Docker'],
     imageName: 'portfolio-logo.png',
+    links:[
+      {
+        languageName : LanguageEnum.english,
+        details:[
+          {
+            label : "See Repository",
+            link : "https://github.com/ianer-glitch/WhoAmIProject",
+            primeIconName : "pi pi-github"
+          },
+          {
+            label : "Go to Project",
+            link : "http://ianrepkermalavazi.com.br",
+            primeIconName : "pi pi-globe"
+          },
+        ]
+      },
+      {
+        languageName : LanguageEnum.brazilianPortuguese,
+        details:[
+          {
+            label : "Ver Repositório",
+            link : "https://github.com/ianer-glitch/WhoAmIProject",
+            primeIconName : "pi pi-github"
+          },
+          {
+            label : "Acessar Projeto Publicado",
+            link : "http://ianrepkermalavazi.com.br",
+            primeIconName : "pi pi-globe"
+          },
+        ]
+      },
+    ],
     readeableInformation: [
       {
         languageName: LanguageEnum.english,
@@ -16,7 +46,7 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
           '<p>This portfolio was created to show my developer skills !</p>',
           "<p>It's is a compilation of all my experiences and a sucessfull Frontend implementation of atomic desing.</p>",
           "<p>A user that acess the app can choose between Portuguese language or English Language, light theme or dark theme and it can automatically choose based on the person's preference.</p>",
-          '<p>My goal here is show my best projects to everyone</p>!'
+          '<p>My goal here is show my best projects to everyone!</p>'
         ],
         name: 'My Portfolio'
       },
@@ -35,9 +65,34 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
   },
   {
     id: '1',
-    repositoryLink: 'https://github.com/ianer-glitch/docker-vue-template',
     tecnlogies: ['Vuejs', 'Docker'],
     imageName: 'docker-vue-template-logo.png',
+    
+    links:[
+      {
+        languageName : LanguageEnum.english,
+        details:[
+          {
+            label : "See Repository",
+            link : "https://github.com/ianer-glitch/docker-vue-template",
+            primeIconName : "pi pi-github"
+          },
+        ]
+      },
+      {
+        languageName : LanguageEnum.brazilianPortuguese,
+        details:[
+          {
+            label : "Ver Repositório",
+            link : "https://github.com/ianer-glitch/docker-vue-template",
+            primeIconName : "pi pi-github"
+          },
+        ]
+      },
+
+
+      
+    ],
     readeableInformation: [
       {
         languageName: LanguageEnum.english,
@@ -45,7 +100,7 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
         description: [
           '<p>This project was created to store in a simple way the dockerfiles to dockerizing a vuejs app!</p>',
           '<p>Sometimes we need a solid environment for development and production.</p>',
-          '<p>To active this, checkout the repository and Wiki</p>!'
+          '<p>To active this, checkout the repository and Wiki !</p>'
         ],
         name: 'Docker Vue Template'
       },
