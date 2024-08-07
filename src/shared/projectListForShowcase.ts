@@ -4,7 +4,7 @@ import { LanguageEnum } from "@/enums/LanguageEnum"
 const projectListForShowcase: Array<ProjectShowcaseItem> = [
   {
     id: "0",
-    tecnlogies: ["Vuejs", "Typescript", "HTML", "CSS", "Tailwind", "PrimeVue", "Docker"],
+    tecnlogies: ["Atomic Design","Vuejs", "Typescript", "HTML", "CSS", "Tailwind", "PrimeVue", "Docker"],
     imageName: "portfolio-logo.png",
     links:[
       {
@@ -53,10 +53,11 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
         languageName: LanguageEnum.english,
         bannerName: "",
         description: [
-          "<p>This portfolio was created to show my developer skills !</p>",
-          "<p>It's is a compilation of all my experiences and a sucessfull Frontend implementation of atomic desing.</p>",
-          "<p>A user that acess the app can choose between Portuguese language or English Language, light theme or dark theme and it can automatically choose based on the person's preference.</p>",
-          "<p>My goal here is show my best projects to everyone!</p>"
+          "<p>This portfolio was created to show my developer skills.</p>",
+          "<p>It's a compilation of all my successful experiences.</p>",
+          "<p>Any user acessing the app can choose between languages Portuguese or English, light or dark themes.</p>",
+          "<p>It also automatically chooses themes based on the person's browser.</p>",
+          "<p>My goal here is to show everyone my best projects so far!</p>"
         ],
         name: "My Portfolio"
       },
@@ -108,9 +109,9 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
         languageName: LanguageEnum.english,
         bannerName: "",
         description: [
-          "<p>This project was created to store in a simple way the dockerfiles to dockerizing a vuejs app!</p>",
-          "<p>Sometimes we need a solid environment for development and production.</p>",
-          "<p>To active this, checkout the repository and Wiki !</p>"
+          "<p>This project was created to store in a simple way the dockerfiles to dockerize a <em>Vue.js</em> app.</p>",
+          "<p>Project development and production often relies on a solid enviroment.</p>",
+          "<p>To achieve this, just check the repository and Wiki.</p>"
         ],
         name: "Docker Vue Template"
       },
