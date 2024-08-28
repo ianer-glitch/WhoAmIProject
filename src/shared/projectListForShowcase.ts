@@ -143,7 +143,7 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
           },
           {
             label : "Go to Desing Project",
-            link : "https://www.figma.com/design/zA8zSMNVcipWsQ1nnBE5z7/VamosRachar?t=HkjDs6dDMkzoMxmu-1",
+            link : "https://www.figma.com/design/zA8zSMNVcipWsQ1nnBE5z7/VamosRachar?node-id=0-1&t=tWPh7nWWv4SPCU72-1",
             primeIconName : "pi pi-palette"
           },
         ]
@@ -158,7 +158,7 @@ const projectListForShowcase: Array<ProjectShowcaseItem> = [
           },
           {
             label : "Acessar o Desing",
-            link : "https://www.figma.com/design/zA8zSMNVcipWsQ1nnBE5z7/VamosRachar?t=HkjDs6dDMkzoMxmu-1",
+            link : "https://www.figma.com/design/zA8zSMNVcipWsQ1nnBE5z7/VamosRachar?node-id=0-1&t=tWPh7nWWv4SPCU72-1",
             primeIconName : "pi pi-palette"
           },
         ]
